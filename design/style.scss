@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+//  couleurs principaux
+$primary: #fefefe;
+$secondary: #2f94fd;
+$accent: #3d4d57;
+
+#navigation {
+    display: grid;
+    grid-template-columns: 45vw 1fr;
+    padding: 1vh;
+    border-bottom: 1px solid $accent;
+    a {
+        img {
+            max-width: 6.5vw;
+            max-height: 6.5vw;
+            border-radius: 30vw;
+        }
+    }
+    ul {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding: 2rem;
+        li {
+            margin-left: 1rem;
+            list-style-type: none;
+            a {
+                text-decoration: none;
+                margin: auto;
+                color: $accent;
+            }
+            &:hover {
+                border-bottom: 1px solid $accent;
+                padding: .02rem;
+            }
+            
+        }
+    }
+}
