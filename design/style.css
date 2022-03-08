@@ -9,8 +9,8 @@ body {
       grid-template-columns: 20vw 1fr;
   padding-left: 2vh;
   padding-right: 2vh;
-  height: 20vh;
-  border-bottom: 1px solid #2f94fd;
+  height: 15%;
+  border-bottom: 1px solid #fefefe;
   background-color: #3d4d57;
   position: fixed;
   top: 0;
@@ -36,7 +36,7 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 #navigation ul li {
@@ -49,6 +49,8 @@ body {
 
 #navigation ul li span {
   color: #fefefe;
+  font-size: 1em;
+  margin-top: 2px;
 }
 
 #navigation ul li a {
@@ -59,9 +61,65 @@ body {
 }
 
 #navigation ul li:hover {
-  background-color: #2f94fd;
+  background-color: #fefefe;
   padding: .5rem;
   border-radius: 2rem;
   text-align: center;
+}
+
+#navigation ul li:hover span {
+  color: #3d4d57;
+}
+
+#navigation ul li:hover a {
+  color: #3d4d57;
+}
+
+@media screen and (max-width: 1044px) {
+  #navigation ul li span {
+    color: #fefefe;
+    font-size: .9em;
+  }
+  #navigation ul li a {
+    margin: auto 12px;
+    font-size: .9em;
+  }
+  #navigation ul li:hover {
+    border-radius: 1rem;
+    font-size: .8em;
+    text-align: center;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@media screen and (max-width: 930px) {
+  #navigation ul li {
+    margin-left: 75px;
+  }
+  #navigation ul li span {
+    color: #fefefe;
+    font-size: 1.5em;
+  }
+  #navigation ul li a {
+    margin: auto 12px;
+    font-size: .9em;
+    display: none;
+  }
+  #navigation ul li:hover {
+    background-color: #fefefe;
+    font-size: .7em;
+    text-align: center;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+  }
+  #navigation ul li:hover span {
+    display: none;
+  }
+  #navigation ul li:hover a {
+    display: block;
+  }
 }
 /*# sourceMappingURL=style.css.map */

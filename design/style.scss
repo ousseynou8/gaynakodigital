@@ -10,8 +10,8 @@ body {
     grid-template-columns: 20vw 1fr;
     padding-left: 2vh;
     padding-right: 2vh;
-    height: 20vh;
-    border-bottom: 1px solid $secondary;
+    height: 15%;
+    border-bottom: 1px solid $primary;
     background-color: $accent;
     position: fixed;
     top: 0;
@@ -30,13 +30,15 @@ body {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding: 2rem;
+        padding: 1rem;
         li {
             margin-left: 2rem;
             list-style-type: none;
             display: flex;
             span {
                 color: $primary;
+                font-size: 1em;
+                margin-top: 2px;
             }
             a {
 
@@ -46,12 +48,68 @@ body {
                 font-size: 1em;
             }
             &:hover {
-                background-color: $secondary;
+                background-color: $primary;
                 padding: .5rem;
                 border-radius: 2rem;
                 text-align: center;
+                span {color: $accent;}
+                a {color: $accent;}
             }
             
+        }
+    }
+}
+
+@media  screen and (max-width: 1044px) {
+    #navigation {
+        ul {
+            li {
+                span {
+                    color: $primary;
+                    font-size: .9em;
+                }
+                a {
+                    margin: auto 12px;
+                    font-size: .9em;
+                }
+                &:hover {
+                    border-radius: 1rem;
+                    font-size: .8em;
+                    text-align: center;
+                    transform: scale(1.1);
+                }
+                
+            }
+        }
+    }
+}
+
+@media  screen and (max-width: 930px) {
+    #navigation {
+        ul {
+            li {
+                margin-left: 75px;
+                span {
+                    color: $primary;
+                    font-size: 1.5em;
+                }
+                a {
+                    margin: auto 12px;
+                    font-size: .9em;
+                    display: none;
+
+                }
+                &:hover {
+                    background-color: $primary;
+                    font-size: .7em;
+                    text-align: center;
+                    transform: scale(1.2);
+                    transition: all .1s ease-in-out;
+                    span { display: none;  }
+                    a { display: block;  }
+                }
+                
+            }
         }
     }
 }
