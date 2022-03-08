@@ -5,25 +5,34 @@
           box-sizing: border-box;
 }
 
-#navigation {
+body h1 {
+  text-align: center;
+}
+
+body img {
+  width: 100%;
+}
+
+body #navigation {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 45vw 1fr;
-      grid-template-columns: 45vw 1fr;
+  -ms-grid-columns: 25vw 1fr;
+      grid-template-columns: 25vw 1fr;
   padding: 1vh;
   border-bottom: 1px solid #3d4d57;
 }
 
-#navigation a img {
-  max-width: 6.5vw;
-  max-height: 6.5vw;
+body #navigation a img {
+  max-width: 5.5vw;
+  max-height: 5.5vw;
   border-radius: 30vw;
 }
 
-#navigation ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+body #navigation ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+      grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -33,19 +42,54 @@
   padding: 2rem;
 }
 
-#navigation ul li {
+body #navigation ul li {
   margin-left: 1rem;
   list-style-type: none;
 }
 
-#navigation ul li a {
+body #navigation ul li a {
   text-decoration: none;
   margin: auto;
   color: #3d4d57;
 }
 
-#navigation ul li:hover {
+body #navigation ul li:hover {
   border-bottom: 1px solid #3d4d57;
   padding: .02rem;
+}
+
+body #header {
+  background: cadetblue;
+  -ms-grid-columns: 60vw 1fr;
+      grid-template-columns: 60vw 1fr;
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+}
+
+body #header #describe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body section div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50vw 1fr;
+      grid-template-columns: 50vw 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=style.css.map */
