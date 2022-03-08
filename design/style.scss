@@ -1,9 +1,6 @@
-//  couleurs principaux
-$primary: #fefefe;
-$secondary: #2f94fd;
-$accent: #3d4d57;
+@import './variables';
 body {
-    background-color: $accent;
+    background-color: $secondary;
 }
 #navigation {
     display: grid;
@@ -11,7 +8,6 @@ body {
     padding-left: 2vh;
     padding-right: 2vh;
     height: 15%;
-    border-bottom: 1px solid $primary;
     background-color: $accent;
     position: fixed;
     top: 0;
@@ -60,56 +56,10 @@ body {
     }
 }
 
-@media  screen and (max-width: 1044px) {
-    #navigation {
-        ul {
-            li {
-                span {
-                    color: $primary;
-                    font-size: .9em;
-                }
-                a {
-                    margin: auto 12px;
-                    font-size: .9em;
-                }
-                &:hover {
-                    border-radius: 1rem;
-                    font-size: .8em;
-                    text-align: center;
-                    transform: scale(1.1);
-                }
-                
-            }
-        }
-    }
+section {
+    padding-top: 88px;
 }
 
-@media  screen and (max-width: 930px) {
-    #navigation {
-        ul {
-            li {
-                margin-left: 75px;
-                span {
-                    color: $primary;
-                    font-size: 1.5em;
-                }
-                a {
-                    margin: auto 12px;
-                    font-size: .9em;
-                    display: none;
 
-                }
-                &:hover {
-                    background-color: $primary;
-                    font-size: .7em;
-                    text-align: center;
-                    transform: scale(1.2);
-                    transition: all .1s ease-in-out;
-                    span { display: none;  }
-                    a { display: block;  }
-                }
-                
-            }
-        }
-    }
-}
+@import './1044';
+@import './930';
