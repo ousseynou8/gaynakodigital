@@ -1,23 +1,29 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+body {
+  background-color: #3d4d57;
 }
 
 #navigation {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 45vw 1fr;
-      grid-template-columns: 45vw 1fr;
-  padding: 1vh;
-  border-bottom: 1px solid #3d4d57;
+  -ms-grid-columns: 20vw 1fr;
+      grid-template-columns: 20vw 1fr;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  height: 20vh;
+  border-bottom: 1px solid #2f94fd;
+  background-color: #3d4d57;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 85%;
 }
 
 #navigation a img {
   max-width: 6.5vw;
   max-height: 6.5vw;
   border-radius: 30vw;
+  margin: 15px;
 }
 
 #navigation ul {
@@ -34,18 +40,28 @@
 }
 
 #navigation ul li {
-  margin-left: 1rem;
+  margin-left: 2rem;
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#navigation ul li span {
+  color: #fefefe;
 }
 
 #navigation ul li a {
   text-decoration: none;
-  margin: auto;
-  color: #3d4d57;
+  margin: auto 12px;
+  color: #fefefe;
+  font-size: 1em;
 }
 
 #navigation ul li:hover {
-  border-bottom: 1px solid #3d4d57;
-  padding: .02rem;
+  background-color: #2f94fd;
+  padding: .5rem;
+  border-radius: 2rem;
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
