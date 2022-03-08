@@ -19,11 +19,34 @@ body {
   bottom: 85%;
 }
 
-#navigation a img {
-  max-width: 6.5vw;
-  max-height: 6.5vw;
+#navigation #logo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1px;
+  text-decoration: none;
+}
+
+#navigation #logo span {
+  color: #fefefe;
+  margin-left: -55px;
+  font-weight: 900;
+  font-size: large;
+}
+
+#navigation #logo span code {
+  color: tomato;
+  font-size: larger;
+  font-stretch: narrower;
+}
+
+#navigation #logo img {
+  max-width: 8vw;
   border-radius: 30vw;
-  margin: 15px;
 }
 
 #navigation ul {
@@ -36,7 +59,7 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 1rem;
+  padding: .1rem;
 }
 
 #navigation ul li {
@@ -77,8 +100,40 @@ body {
   color: #3d4d57;
 }
 
+#header {
+  margin-top: 5em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+#header #describe {
+  margin-top: 10rem;
+}
+
+#header #describe h1 {
+  color: tomato;
+  letter-spacing: 1px;
+}
+
+#header #describe p {
+  color: #fefefe;
+  letter-spacing: 2.2px;
+  line-height: 2;
+  font-weight: 600;
+  font-size: 14px;
+  padding: 1em;
+}
+
 section {
   padding-top: 88px;
+  margin: 1em;
+}
+
+section h1 {
+  color: tomato;
+  text-align: center;
 }
 
 @media screen and (max-width: 1044px) {

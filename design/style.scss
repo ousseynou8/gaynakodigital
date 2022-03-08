@@ -2,6 +2,7 @@
 body {
     background-color: $secondary;
 }
+// Ici c'est le navbar
 #navigation {
     display: grid;
     grid-template-columns: 20vw 1fr;
@@ -14,29 +15,50 @@ body {
     left: 0;
     right: 0;
     bottom: 85%;
-    a {
+    #logo {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        gap: 1px;
+        text-decoration: none;
+        span {
+            // Gaynako
+            color: $primary;
+            margin-left: -55px;
+            font-weight: 900;
+            font-size: large;
+            code {
+                // digital
+                color: tomato;
+                font-size: larger;
+                font-stretch: narrower;
+            }
+        }
         img {
-            max-width: 6.5vw;
-            max-height: 6.5vw;
+            // L'image du logo
+            max-width: 8vw;
             border-radius: 30vw;
-            margin: 15px;
         }
     }
     ul {
+        // Menu de la navigation
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding: 1rem;
+        padding: .1rem;
         li {
+            // Chaque menu de la navigation
             margin-left: 2rem;
             list-style-type: none;
             display: flex;
             span {
+                // Icon du menu
                 color: $primary;
                 font-size: 1em;
                 margin-top: 2px;
             }
             a {
+                // Titre du menu
                 font-family: Lato;
                 font-weight: 1000;
                 text-decoration: none;
@@ -45,6 +67,7 @@ body {
                 font-size: 1.1em;
             }
             &:hover {
+                // Hover de chaque menu représenté par un li
                 background-color: $primary;
                 padding: .5rem;
                 border-radius: 2rem;
@@ -56,9 +79,42 @@ body {
         }
     }
 }
+// STYLE DU HEADER
+#header {
+    margin-top: 5em;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    img {
 
+    }
+    #describe {
+        margin-top: 10rem;
+
+        h1{
+            color: tomato;
+            letter-spacing: 1px;
+        }
+        p {
+            color: $primary;
+            letter-spacing: 2.2px;
+            line-height: 2;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 1em;
+        }
+    }
+}
+// STYLE COMMUN POUR TOUTES LES SECTIONS
 section {
     padding-top: 88px;
+    margin: 1em;
+
+    // TITRE DE LA SECTION
+    h1 {
+        color: tomato;
+        text-align: center;
+
+    }
 }
 
 
