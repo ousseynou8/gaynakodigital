@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
 body {
   background-color: #3d5564;
 }
@@ -115,6 +117,7 @@ body {
 #header #describe h1 {
   color: tomato;
   letter-spacing: 1px;
+  font-family: Ultra;
 }
 
 #header #describe p {
@@ -129,11 +132,18 @@ body {
 section {
   padding-top: 88px;
   margin: 1em;
+  font-family: Ultra;
 }
 
 section h1 {
   color: tomato;
   text-align: center;
+}
+
+section p {
+  font-family: "EB Garamond";
+  color: #fefefe;
+  line-height: 1.5;
 }
 
 @media screen and (max-width: 1044px) {
