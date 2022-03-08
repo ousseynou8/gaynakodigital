@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
 body {
   background-color: #3d5564;
 }
@@ -53,10 +54,12 @@ body {
 }
 
 #navigation ul li a {
+  font-family: Lato;
+  font-weight: 1000;
   text-decoration: none;
-  margin: auto 12px;
+  margin: auto 8px;
   color: #fefefe;
-  font-size: 1em;
+  font-size: 1.1em;
 }
 
 #navigation ul li:hover {

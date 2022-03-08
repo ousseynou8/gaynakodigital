@@ -37,11 +37,12 @@ body {
                 margin-top: 2px;
             }
             a {
-
+                font-family: Lato;
+                font-weight: 1000;
                 text-decoration: none;
-                margin: auto 12px;
+                margin: auto 8px;
                 color: $primary;
-                font-size: 1em;
+                font-size: 1.1em;
             }
             &:hover {
                 background-color: $primary;
