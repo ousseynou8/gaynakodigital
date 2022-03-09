@@ -1,0 +1,41 @@
+// @import './variables';
+@media  screen and (max-width: 720px) {
+    #navigation {
+        display: grid;
+        grid-template-columns: 1fr 1fr 30px;
+        align-items: center;
+        ul {
+            li {
+                margin-left: 75px;
+                display: none;
+                span {
+                    color: $primary;
+                    font-size: 2em;
+                }
+                a {
+                    margin: auto 12px;
+                    display: none;
+
+                }
+                // &:hover {
+                //     background-color: $primary;
+                //     font-size: .7em;
+                //     text-align: center;
+                //     transform: scale(1.2);
+                //     transition: all .1s ease-in-out;
+                //     span { display: none;  }
+                //     a { display: block;  }
+                // }
+                
+            }
+        }
+        #burger {
+            .burg {
+                width: 20px;
+                height: 2px;
+                background-color: $primary;
+                margin-top: 3px; 
+            }
+        }
+    }
+}
