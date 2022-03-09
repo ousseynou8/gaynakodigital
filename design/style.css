@@ -5,9 +5,18 @@ body {
   background-color: #3d5564;
 }
 
-#navigation {
+body h1 {
+  text-align: center;
+}
+
+body img {
+  width: 100%;
+}
+
+body #navigation {
   display: -ms-grid;
   display: grid;
+ 
   -ms-grid-columns: 20vw 1fr;
       grid-template-columns: 20vw 1fr;
   padding-left: 2vh;
@@ -48,13 +57,23 @@ body {
 
 #navigation #logo img {
   max-width: 8vw;
-  border-radius: 30vw;
+
+  -ms-grid-columns: 25vw 1fr;
+      grid-template-columns: 25vw 1fr;
+  padding: 1vh;
+  border-bottom: 1px solid #3d4d57;
 }
 
-#navigation ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+body #navigation a img {
+  max-width: 5.5vw;
+  max-height: 5.5vw; 
+}
+
+body #navigation ul {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+      grid-template-columns: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -64,12 +83,11 @@ body {
   padding: .1rem;
 }
 
-#navigation ul li {
-  margin-left: 2rem;
-  list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+ 
+body #navigation ul li {
+  margin-left: 1rem;
+ 
+   
 }
 
 #navigation ul li span {
@@ -77,16 +95,17 @@ body {
   font-size: 1em;
   margin-top: 2px;
 }
-
+ 
 #navigation ul li a {
   font-family: Lato;
   font-weight: 1000;
+ 
   text-decoration: none;
   margin: auto 8px;
   color: #fefefe;
   font-size: 1.1em;
 }
-
+ 
 #navigation ul li:hover {
   background-color: #fefefe;
   padding: .5rem;
@@ -228,5 +247,41 @@ section p {
     background-color: #fefefe;
     margin-top: 3px;
   }
+  
+}
+
+body #header {
+  background: cadetblue;
+  -ms-grid-columns: 60vw 1fr;
+      grid-template-columns: 60vw 1fr;
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+}
+
+body #header #describe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body section div {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50vw 1fr;
+      grid-template-columns: 50vw 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=style.css.map */
