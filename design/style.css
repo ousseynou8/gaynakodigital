@@ -110,6 +110,10 @@ body {
       grid-template-columns: repeat(2, 1fr);
 }
 
+#header img {
+  width: 55vw;
+}
+
 #header #describe {
   margin-top: 10rem;
 }
@@ -122,10 +126,11 @@ body {
 
 #header #describe p {
   color: #fefefe;
-  letter-spacing: 2.2px;
-  line-height: 2;
+  font-family: "EB Garamond";
+  letter-spacing: .5px;
+  line-height: 1.5;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 19px;
   padding: 1em;
 }
 
@@ -138,11 +143,13 @@ section {
 section h1 {
   color: tomato;
   text-align: center;
+  font-size: 2.5rem;
 }
 
 section p {
   font-family: "EB Garamond";
   color: #fefefe;
+  font-size: 1.3rem;
   line-height: 1.5;
 }
 
@@ -190,6 +197,36 @@ section p {
   }
   #navigation ul li:hover a {
     display: block;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  #navigation {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 30px;
+        grid-template-columns: 1fr 1fr 30px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #navigation ul li {
+    margin-left: 75px;
+    display: none;
+  }
+  #navigation ul li span {
+    color: #fefefe;
+    font-size: 2em;
+  }
+  #navigation ul li a {
+    margin: auto 12px;
+    display: none;
+  }
+  #navigation #burger .burg {
+    width: 20px;
+    height: 2px;
+    background-color: #fefefe;
+    margin-top: 3px;
   }
 }
 /*# sourceMappingURL=style.css.map */

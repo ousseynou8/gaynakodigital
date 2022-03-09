@@ -85,7 +85,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     img {
-
+        width: 55vw;
     }
     #describe {
         margin-top: 10rem;
@@ -97,10 +97,11 @@ body {
         }
         p {
             color: $primary;
-            letter-spacing: 2.2px;
-            line-height: 2;
+            font-family: "EB Garamond";
+            letter-spacing: .5px;
+            line-height: 1.5;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 19px;
             padding: 1em;
         }
     }
@@ -115,12 +116,14 @@ section {
     h1 {
         color: tomato;
         text-align: center;
+        font-size: 2.5rem;
 
     }
     // PARAGRAPHE DE LA SECTION
     p {
         font-family: "EB Garamond";
         color: $primary;
+        font-size: 1.3rem;
         line-height: 1.5;
     }
 }
@@ -128,3 +131,4 @@ section {
 
 @import './1044';
 @import './930';
+@import './720';
