@@ -1,200 +1,181 @@
-@import './variables';
+@import "./variables";
 body {
-    background-color: $secondary;
+  background-color: $secondary;
 }
- 
+
 // Ici c'est le navbar
 #navigation {
-    display: grid;
-    grid-template-columns: 20vw 1fr;
-    padding-left: 2vh;
-    padding-right: 2vh;
-    height: 15%;
-    background-color: $accent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 85%;
-    #logo {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        gap: 1px;
-        text-decoration: none;
-        span {
-            // Gaynako
-            color: $primary;
-            margin-left: -55px;
-            font-weight: 900;
-            font-size: large;
-            code {
-                // digital
-                color: tomato;
-                font-size: larger;
-                font-stretch: narrower;
-            }
-        }
-        img {
-            // L'image du logo
-            max-width: 8vw;
- 
+  display: grid;
+  grid-template-columns: 20vw 1fr;
+  background-color: $accent;
+  position: sticky;
+  top: 0;
+  left: 0;
 
-//  couleurs principaux
+  #logo {
+ display:grid;
+    align-items: center;
+   
+    text-decoration: none;
+    span {
+      // Gaynako
+      color: $primary; 
+      font-weight: 900;
+      font-size: large;
+      code {
+        // digital
+        color: tomato;
+        font-size: larger;
+        font-stretch: narrower;
+      }
+    }
+    img {
+      // L'image du logo
+      max-width: 8vw;
+    }
+  }
+}
 $primary: #fefefe;
 $secondary: #2f94fd;
 $accent: #3d4d57;
 
-
 // container
 $container: 1400px;
-$marginCenter:30px auto;
-
+$marginCenter: 30px auto;
 
 // largeur de l'image
 $widthimg: 100%;
 
 body {
-h1{
+  h1 {
     text-align: center;
-}
-    img {
-        width: $widthimg;
-    }
-    
-#navigation {
+  }
+  img {
+    width: $widthimg;
+  }
+
+  #navigation {
     display: grid;
     grid-template-columns: 25vw 1fr;
     padding: 1vh;
-    border-bottom: 1px solid $accent;
-    
-    
+    border-bottom: 1px solid #fff;
+
     a {
-        img {
-            max-width: 5.5vw;
-            max-height: 5.5vw;
- 
-             
-        }
+      img {
+        max-width: 5.5vw;
+        max-height: 5.5vw;
+      }
     }
     ul {
- 
-        // Menu de la navigation
+      // Menu de la navigation
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0.1rem;
+      li {
+        // Chaque menu de la navigation
+        margin-left: 2rem;
+        list-style-type: none;
         display: flex;
- 
-        align-items: center;
-        justify-content: flex-end;
-        padding: .1rem;
-        li {
-            // Chaque menu de la navigation
-            margin-left: 2rem;
-            list-style-type: none;
-            display: flex;
-            span {
-                // Icon du menu
-                color: $primary;
-                font-size: 1em;
-                margin-top: 2px;
-            }
-            a {
-                // Titre du menu
-                font-family: Lato;
-                font-weight: 1000;
-                text-decoration: none;
-                margin: auto 8px;
-                color: $primary;
-                font-size: 1.1em;
-            }
-            &:hover {
-                // Hover de chaque menu représenté par un li
-                background-color: $primary;
-                padding: .5rem;
-                border-radius: 2rem;
-                text-align: center;
-                span {color: $accent;}
-                a {color: $accent;}
-            }
-            
+        span {
+          // Icon du menu
+          color: $primary;
+          font-size: 1em;
+          margin-top: 2px;
         }
+        a {
+          // Titre du menu
+          font-family: Lato;
+          font-weight: 1000;
+          text-decoration: none;
+          margin: auto 8px;
+          color: $primary;
+          font-size: 1.1em;
+        }
+        &:hover {
+          // Hover de chaque menu représenté par un li
+          background-color: $primary;
+          padding: 0.5rem;
+          border-radius: 2rem;
+          text-align: center;
+          span {
+            color: $accent;
+          }
+          a {
+            color: $accent;
+          }
+        }
+      }
     }
-}
- 
-// STYLE DU HEADER
-#header {
-    margin-top: 5em;
+  }
+
+  // STYLE DU HEADER
+  #header { 
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     img {
-        width: 55vw;
+      width: 55vw;
     }
     #describe {
-        margin-top: 10rem;
+      margin-top: 10rem;
 
-        h1{
-            color: tomato;
-            letter-spacing: 1px;
-            font-family: Ultra;
-        }
-        p {
-            color: $primary;
-            font-family: "EB Garamond";
-            letter-spacing: .5px;
-            line-height: 1.5;
-            font-weight: 600;
-            font-size: 19px;
-            padding: 1em;
-        }
+      h1 {
+        color: tomato;
+        letter-spacing: 1px;
+        font-family: Ultra;
+      }
+      p {
+        color: $primary;
+        font-family: "EB Garamond";
+        letter-spacing: 0.5px;
+        line-height: 1.5;
+        font-weight: 600;
+        font-size: 19px;
+        padding: 1em;
+      }
     }
-}
-// STYLE COMMUN POUR TOUTES LES SECTIONS
-section {
+  }
+  // STYLE COMMUN POUR TOUTES LES SECTIONS
+  section {
     padding-top: 88px;
     margin: 1em;
     font-family: Ultra;
 
     // TITRE DE LA SECTION
     h1 {
-        color: tomato;
-        text-align: center;
-        font-size: 2.5rem;
-
+      color: tomato;
+      text-align: center;
+      font-size: 2.5rem;
     }
     // PARAGRAPHE DE LA SECTION
     p {
-        font-family: "EB Garamond";
-        color: $primary;
-        font-size: 1.3rem;
-        line-height: 1.5;
+      font-family: "EB Garamond";
+      color: $primary;
+      font-size: 1.3rem;
+      line-height: 1.5;
     }
-}
+  }
 
+  @import "./1044";
+  @import "./930";
+  @import "./720";
 
-@import './1044';
-@import './930';
-@import './720';
- 
- #header {
-     
- 
+  #header {
     background: cadetblue;
     grid-template-columns: 60vw 1fr;
     display: grid;
     height: 100vh;
-    #describe{
-        display:flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
+    #describe {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
     }
- 
-}
+  }
 
-section div{
+  section div {
     display: grid;
     grid-template-columns: 50vw 1fr;
     align-items: center;
+  }
 }
-
-
-}
- 
