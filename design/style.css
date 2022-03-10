@@ -140,21 +140,48 @@ body {
 
 section {
   padding-top: 88px;
-  margin: 1em;
+  overflow: hidden;
   font-family: Ultra;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+      grid-template-areas: "title img" "text img";
 }
 
 section h1 {
   color: tomato;
   text-align: center;
   font-size: 2.5rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title;
+}
+
+section img {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: img;
+  width: 65vw;
+  margin-top: 145px;
 }
 
 section p {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: text;
   font-family: "EB Garamond";
   color: #fefefe;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: 1.5;
+  text-align: center;
+  border-radius: 15%;
+  padding: 1em;
+  word-spacing: 4px;
+  -webkit-transform: translateX(100px);
+          transform: translateX(100px);
 }
 
 @media screen and (max-width: 1044px) {
@@ -241,6 +268,9 @@ section p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  #navigation #logo img {
+    max-width: 90px;
   }
   #navigation ul li {
     margin-left: 75px;
