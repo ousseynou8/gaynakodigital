@@ -114,11 +114,12 @@ body {
 }
 
 #header img {
-  width: 55vw;
+  width: 45vw;
+  margin-top: 2em;
 }
 
 #header #describe {
-  margin-top: 10rem;
+  margin-top: 7rem;
 }
 
 #header #describe h1 {
@@ -200,6 +201,34 @@ section p {
   }
   #navigation ul li:hover a {
     display: block;
+  }
+  #header {
+    margin-top: 8em;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  #header img {
+    width: 40vw;
+    margin-top: 2rem;
+  }
+  #header #describe {
+    margin-top: 1rem;
+  }
+  #header #describe h1 {
+    color: tomato;
+    letter-spacing: 1px;
+    font-family: Ultra;
+  }
+  #header #describe p {
+    color: #fefefe;
+    font-family: "EB Garamond";
+    letter-spacing: .5px;
+    line-height: 1.5;
+    font-weight: 600;
+    font-size: 19px;
+    padding: 1em;
   }
 }
 

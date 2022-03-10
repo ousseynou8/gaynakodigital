@@ -87,10 +87,11 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     img {
-        width: 55vw;
+        width: 45vw;
+        margin-top: 2em;
     }
     #describe {
-        margin-top: 10rem;
+        margin-top: 7rem;
 
         h1{
             color: tomato;
