@@ -1,0 +1,24 @@
+// @import './variables';
+@media  screen and (max-width: 1044px) {
+    #navigation {
+        ul {
+            li {
+                span {
+                    color: $primary;
+                    font-size: .9em;
+                }
+                a {
+                    margin: auto 12px;
+                    font-size: .9em;
+                }
+                &:hover {
+                    border-radius: 1rem;
+                    font-size: .8em;
+                    text-align: center;
+                    transform: scale(1.1);
+                }
+                
+            }
+        }
+    }
+}
