@@ -1,0 +1,36 @@
+// Dans ce fichier, nous avons l'ensemble des fonctions agissant sur les animations
+@keyframes animateBefore {
+    0% {
+        transform: translateX(1px) rotateZ(15deg);
+    }
+    25% {
+        transform: translateX(2px) rotateZ(90deg);
+    }
+    50% {
+        transform: translateX(4px) rotateZ(35deg);
+    }
+    75% {
+        transform: translateX(5px) rotateZ(45deg);
+    }
+    100% {
+        transform: translateX(5px) rotateZ(45deg);
+    }
+}
+
+@keyframes animateAfter {
+    0% {
+        transform: translateX(1px) rotateZ(-15deg);
+    }
+    25% {
+        transform: translateX(2px) rotateZ(-25deg);
+    }
+    50% {
+        transform: translateX(4px) rotateZ(-35deg);
+    }
+    75% {
+        transform: translateX(5px) rotateZ(-35deg);
+    }
+    100% {
+        transform: translateX(5px) rotateZ(-45deg);
+    }
+}
