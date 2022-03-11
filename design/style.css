@@ -10,19 +10,26 @@ body {
   display: grid;
   -ms-grid-columns: 20vw 1fr;
       grid-template-columns: 20vw 1fr;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  height: 15%;
   background-color: #3d4d57;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
+  right: 0;
+  bottom: 85%;
 }
 
 #navigation #logo {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 1px;
   text-decoration: none;
 }
 
@@ -39,35 +46,11 @@ body {
 }
 
 #navigation #logo img {
-
   max-width: 10rem;
   border-radius: 30vw;
-
 }
 
-body h1 {
-  text-align: center;
-}
-
-body img {
-  width: 100%;
-}
-
-body #navigation {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 25vw 1fr;
-      grid-template-columns: 25vw 1fr;
-  padding: 1vh;
-  border-bottom: 1px solid #fff;
-}
-
-body #navigation a img {
-  max-width: 5.5vw;
-  max-height: 5.5vw;
-}
-
-body #navigation ul {
+#navigation ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,10 +60,10 @@ body #navigation ul {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  padding: 0.1rem;
+  padding: .1rem;
 }
 
-body #navigation ul li {
+#navigation ul li {
   margin-left: 2rem;
   list-style-type: none;
   display: -webkit-box;
@@ -88,13 +71,13 @@ body #navigation ul li {
   display: flex;
 }
 
-body #navigation ul li span {
+#navigation ul li span {
   color: #fefefe;
   font-size: 1em;
   margin-top: 2px;
 }
 
-body #navigation ul li a {
+#navigation ul li a {
   font-family: Lato;
   font-weight: 1000;
   text-decoration: none;
@@ -103,21 +86,20 @@ body #navigation ul li a {
   font-size: 1.1em;
 }
 
-body #navigation ul li:hover {
+#navigation ul li:hover {
   background-color: #fefefe;
-  padding: 0.5rem;
+  padding: .5rem;
   border-radius: 2rem;
   text-align: center;
 }
 
-body #navigation ul li:hover span {
+#navigation ul li:hover span {
   color: #3d4d57;
 }
 
-body #navigation ul li:hover a {
+#navigation ul li:hover a {
   color: #3d4d57;
 }
-
 
 #navigation #burger {
   display: none;
@@ -125,13 +107,11 @@ body #navigation ul li:hover a {
 
 #header {
   margin-top: 5em;
-
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
 }
-
 
 #header img {
   width: 45vw;
@@ -140,39 +120,37 @@ body #navigation ul li:hover a {
 
 #header #describe {
   margin-top: 7rem;
-
-
 }
 
-body #header #describe h1 {
+#header #describe h1 {
   color: tomato;
   letter-spacing: 1px;
   font-family: Ultra;
 }
 
-body #header #describe p {
+#header #describe p {
   color: #fefefe;
   font-family: "EB Garamond";
-  letter-spacing: 0.5px;
+  letter-spacing: .5px;
   line-height: 1.5;
   font-weight: 600;
   font-size: 19px;
   padding: 1em;
 }
 
-body section {
+section {
   padding-top: 88px;
   margin: 1em;
   font-family: Ultra;
 }
 
-body section h1 {
+section h1 {
   color: tomato;
   text-align: center;
   font-size: 2.5rem;
 }
 
-body section p {
+section p {
   font-family: "EB Garamond";
   color: #fefefe;
   font-size: 1.3rem;
@@ -180,15 +158,15 @@ body section p {
 }
 
 @media screen and (max-width: 1044px) {
-  body #navigation ul li span {
+  #navigation ul li span {
     color: #fefefe;
     font-size: .9em;
   }
-  body #navigation ul li a {
+  #navigation ul li a {
     margin: auto 12px;
     font-size: .9em;
   }
-  body #navigation ul li:hover {
+  #navigation ul li:hover {
     border-radius: 1rem;
     font-size: .8em;
     text-align: center;
@@ -198,18 +176,18 @@ body section p {
 }
 
 @media screen and (max-width: 930px) {
-  body #navigation ul li {
+  #navigation ul li {
     margin-left: 75px;
   }
-  body #navigation ul li span {
+  #navigation ul li span {
     color: #fefefe;
     font-size: 2em;
   }
-  body #navigation ul li a {
+  #navigation ul li a {
     margin: auto 12px;
     display: none;
   }
-  body #navigation ul li:hover {
+  #navigation ul li:hover {
     background-color: #fefefe;
     font-size: .7em;
     text-align: center;
@@ -218,10 +196,10 @@ body section p {
     -webkit-transition: all .1s ease-in-out;
     transition: all .1s ease-in-out;
   }
-  body #navigation ul li:hover span {
+  #navigation ul li:hover span {
     display: none;
   }
-  body #navigation ul li:hover a {
+  #navigation ul li:hover a {
     display: block;
   }
   #header {
@@ -255,7 +233,7 @@ body section p {
 }
 
 @media screen and (max-width: 720px) {
-  body #navigation {
+  #navigation {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr 1fr 30px;
@@ -264,11 +242,10 @@ body section p {
         -ms-flex-align: center;
             align-items: center;
   }
-  body #navigation ul li {
+  #navigation ul li {
     margin-left: 75px;
     display: none;
   }
-
   #navigation #burger {
     display: block;
     cursor: pointer;
@@ -279,7 +256,6 @@ body section p {
   #navigation #burger .burg {
     width: 19px;
     height: 2.8px;
-
     background-color: #fefefe;
     margin-top: 4px;
   }
@@ -453,48 +429,5 @@ body section p {
     -webkit-transform: translateX(5px) rotateZ(-45deg);
             transform: translateX(5px) rotateZ(-45deg);
   }
-  body #header h1 {
-    font-size: 1rem;
-  }
-  body #header div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-body #header {
-  background: cadetblue;
-  -ms-grid-columns: 60vw 1fr;
-      grid-template-columns: 60vw 1fr;
-  display: -ms-grid;
-  display: grid;
-  height: 100vh;
-}
-
-body #header #describe {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-body section div {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 50vw 1fr;
-      grid-template-columns: 50vw 1fr;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 /*# sourceMappingURL=style.css.map */
