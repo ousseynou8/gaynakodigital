@@ -3,6 +3,7 @@ body {
 }
 // Ici c'est le navbar
 #navigation {
+    z-index: 20;
     display: grid;
     grid-template-columns: 20vw 1fr;
     padding-left: 2vh;

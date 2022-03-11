@@ -6,6 +6,7 @@ body {
 }
 
 #navigation {
+  z-index: 20;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 20vw 1fr;
