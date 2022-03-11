@@ -266,16 +266,48 @@ section p {
     display: grid;
     -ms-grid-columns: 1fr 1fr 30px;
         grid-template-columns: 1fr 1fr 30px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   #navigation #logo img {
     max-width: 90px;
   }
+  #navigation ul {
+    -webkit-transform: translateY(-165px) rotateZ(35deg);
+            transform: translateY(-165px) rotateZ(35deg);
+    border-radius: 10%;
+  }
   #navigation ul li {
     margin-left: 75px;
     display: none;
+  }
+  #navigation ul li span {
+    color: #fefefe;
+    font-size: 2em;
+  }
+  #navigation ul li a {
+    margin: auto 12px;
+  }
+  #navigation ul li:hover {
+    background-color: #fefefe;
+    font-size: .9em;
+    text-align: center;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+  }
+  #navigation ul li:hover span {
+    display: none;
+  }
+  #navigation ul li:hover a {
+    display: block;
+  }
+  #navigation ul li:hover:nth-child(3) {
+    font-size: .75em;
+    -webkit-transform: scale(1) translateX(0) !important;
+            transform: scale(1) translateX(0) !important;
   }
   #navigation #burger {
     display: block;
