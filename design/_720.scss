@@ -79,7 +79,7 @@
                 width: 19px;
                 height: 2.8px;
                 position: absolute;
-                background-color: tomato;
+                background-color: $danger;
                 transform: translateX(5px) rotateZ(45deg);
                 transform-origin: center;
                 animation: animateBefore .8s ease-in-out .2 alternate ;
@@ -90,7 +90,7 @@
                 width: 19px;
                 height: 2.8px;
                 position: absolute;
-                background-color: tomato;
+                background-color: $danger;
                 transform: translateX(5px) rotateZ(-45deg);
                 transform-origin: center;
                 animation: animateAfter .8s ease-in-out .2 alternate ;

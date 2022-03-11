@@ -28,7 +28,7 @@ body {
             // transform: translateX(-10px);
             code {
                 // digital
-                color: tomato;
+                color: $danger;
                 font-size: larger;
                 font-stretch: narrower;
             }
@@ -94,7 +94,7 @@ body {
         margin-top: 7rem;
 
         h1{
-            color: tomato;
+            color: $danger;
             letter-spacing: 1px;
             font-family: Ultra;
         }
@@ -117,7 +117,7 @@ section {
 
     // TITRE DE LA SECTION
     h1 {
-        color: tomato;
+        color: $danger;
         text-align: center;
         font-size: 2.5rem;
 
@@ -128,5 +128,5 @@ section {
         color: $primary;
         font-size: 1.3rem;
         line-height: 1.5;
-=    }
+   }
 }
