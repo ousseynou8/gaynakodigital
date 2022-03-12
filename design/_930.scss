@@ -3,7 +3,7 @@
     #navigation {
         ul {
             li {
-                margin-left: 75px;
+               
                 span {
                     color: $primary;
                     font-size: 2em;
@@ -26,8 +26,7 @@
             }
         }
     }
-    #header {
-        margin-top: 8em;
+    #header { 
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         img {

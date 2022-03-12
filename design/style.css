@@ -178,7 +178,12 @@ main section p {
 }
 
 /* contact form */
-form {
+section {
+  height: 100vh;
+  max-height: 800px;
+}
+
+section form {
   width: 90vw;
   max-width: 768px;
   border: 1px solid #ddd;
@@ -194,13 +199,12 @@ form {
   margin: 0 auto;
 }
 
-form label {
+section form label {
   margin-bottom: 15px;
   position: relative;
-  border-bottom: 1px solid #ddd;
 }
 
-form input, form textarea {
+section form input, section form textarea {
   width: 100%;
   padding: 10px 0px;
   margin-top: 20px;
@@ -208,23 +212,23 @@ form input, form textarea {
   outline: none;
 }
 
-form input::-webkit-input-placeholder, form textarea::-webkit-input-placeholder {
+section form input::-webkit-input-placeholder, section form textarea::-webkit-input-placeholder {
   opacity: 0;
 }
 
-form input:-ms-input-placeholder, form textarea:-ms-input-placeholder {
+section form input:-ms-input-placeholder, section form textarea:-ms-input-placeholder {
   opacity: 0;
 }
 
-form input::-ms-input-placeholder, form textarea::-ms-input-placeholder {
+section form input::-ms-input-placeholder, section form textarea::-ms-input-placeholder {
   opacity: 0;
 }
 
-form input::placeholder, form textarea::placeholder {
+section form input::placeholder, section form textarea::placeholder {
   opacity: 0;
 }
 
-form span {
+section form span {
   position: absolute;
   top: 0;
   left: 0;
@@ -235,7 +239,7 @@ form span {
           transition-duration: 300ms;
 }
 
-form button {
+section form button {
   padding: 15px 0px;
   margin-top: 20px;
   background: #3d5564;
@@ -247,14 +251,14 @@ form button {
   transition: all 1s ease-out;
 }
 
-form button:hover, form button:focus {
+section form button:hover, section form button:focus {
   background: aliceblue;
   color: #3d5564;
 }
 
-form label:focus-within > span,
-form input:not(:placeholder-shown) + span,
-form textarea:not(:placeholder-shown) + span {
+section form label:focus-within > span,
+section form input:not(:placeholder-shown) + span,
+section form textarea:not(:placeholder-shown) + span {
   color: white;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
@@ -294,9 +298,6 @@ footer div {
 }
 
 @media screen and (max-width: 930px) {
-  #navigation ul li {
-    margin-left: 75px;
-  }
   #navigation ul li span {
     color: #fefefe;
     font-size: 2em;
@@ -321,7 +322,6 @@ footer div {
     display: block;
   }
   #header {
-    margin-top: 8em;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
@@ -364,12 +364,9 @@ footer div {
     max-width: 90px;
   }
   #navigation ul {
-    -webkit-transform: translateY(-165px) rotateZ(35deg);
-            transform: translateY(-165px) rotateZ(35deg);
     border-radius: 5%;
   }
   #navigation ul li {
-    margin-left: 75px;
     display: none;
   }
   #navigation ul li span {

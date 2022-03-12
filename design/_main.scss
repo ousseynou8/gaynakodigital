@@ -158,7 +158,10 @@ section {
 
 
 /* contact form */
-
+section{
+    height: 100vh;
+    max-height: 800px;
+ 
 form {
     width:90vw;
     max-width:768px;
@@ -174,8 +177,7 @@ form {
   
   label{
     margin-bottom:15px;
-    position:relative;
-    border-bottom:1px solid #ddd;
+    position:relative; 
   }
   
   input, textarea{
@@ -231,7 +233,7 @@ transition:all 1s ease-out;
 
 
 
-
+}
 
 
 
