@@ -276,7 +276,7 @@ section p {
   #navigation ul {
     -webkit-transform: translateY(-165px) rotateZ(35deg);
             transform: translateY(-165px) rotateZ(35deg);
-    border-radius: 10%;
+    border-radius: 5%;
   }
   #navigation ul li {
     margin-left: 75px;
