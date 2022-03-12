@@ -3,7 +3,9 @@
     #navigation {
         display: grid;
         grid-template-columns: 1fr 1fr 30px;
+ 
         align-items: center;
+ 
         #logo {
             img {
                 max-width: 90px;
@@ -13,17 +15,31 @@
             }
         }
         ul {
+            transform: translateY(-165px) rotateZ(35deg);
+            border-radius: 5%;
             li {
                 margin-left: 75px;
                 display: none;
-                // span {
-                //     color: $primary;
-                //     font-size: 2em;
-                // }
-                // a {
-                //     margin: auto 12px;
-                // }
-                
+                span {
+                    color: $primary;
+                    font-size: 2em;
+                }
+                a {
+                    margin: auto 12px;
+                }
+                &:hover {
+                    background-color: $primary;
+                    font-size: .9em;
+                    text-align: center;
+                    transform: scale(1.2);
+                    transition: all .1s ease-in-out;
+                    span { display: none;  }
+                    a { display: block;  }
+                    &:nth-child(3) {
+                        font-size: .75em;
+                        transform: scale(1) translateX(0) !important;
+                    }
+                }
             }
         }
         #burger {
