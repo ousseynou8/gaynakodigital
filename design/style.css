@@ -278,6 +278,9 @@ section p {
             transform: translateY(-165px) rotateZ(35deg);
     border-radius: 5%;
   }
+  #navigation #logo img {
+    max-width: 90px;
+  }
   #navigation ul li {
     margin-left: 75px;
     display: none;

@@ -3,8 +3,9 @@
     #navigation {
         display: grid;
         grid-template-columns: 1fr 1fr 30px;
-        align-items: flex-start;
-        
+ 
+        align-items: center;
+ 
         #logo {
             img {
                 max-width: 90px;
