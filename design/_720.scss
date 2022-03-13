@@ -62,13 +62,13 @@
         gap: 15px;
         padding: 1em !important;
         position: fixed;
-        top: 0;
+        top: 10%;
         border-radius: .1em;
-        right: 0;
+        right: -6%;
         left: 0;
         z-index: -15;
         background-color: $accent;
-        transition: all .30s ease-in-out;
+        transition: all .30s cubic-bezier(0.6, -0.28, 0.735, 0.045);
         li {
             display: inline-block !important;
             padding: .5em;

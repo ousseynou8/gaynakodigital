@@ -1,10 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
-body {
-  background-color: #3d5564;
-}
-
 #navigation {
   z-index: 20;
   display: -ms-grid;
@@ -13,7 +9,7 @@ body {
       grid-template-columns: 20vw 1fr;
   padding-left: 2vh;
   padding-right: 2vh;
-  height: 15%;
+  height: 25%;
   background-color: #3d4d57;
   position: fixed;
   top: 0;
@@ -112,6 +108,10 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  background: url("../imgUrl/keybord.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 #header img {
@@ -330,14 +330,14 @@ section p {
     gap: 15px;
     padding: 1em !important;
     position: fixed;
-    top: 0;
+    top: 10%;
     border-radius: .1em;
-    right: 0;
+    right: -6%;
     left: 0;
     z-index: -15;
     background-color: #3d4d57;
-    -webkit-transition: all .30s ease-in-out;
-    transition: all .30s ease-in-out;
+    -webkit-transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
   }
   .menuHover li {
     display: inline-block !important;
