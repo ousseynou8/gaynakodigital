@@ -41,7 +41,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        margin: initial;
+     
         li {
             // Chaque menu de la navigation
             margin : auto .1rem;
@@ -49,7 +49,7 @@ body {
             display: flex;
             padding: 1rem;
             color: #fff; 
-  transition: all 1s ease-out;
+  transition: all .2s ease-out;
             span {
                 // Icon du menu
                 color: $primary;
@@ -74,6 +74,7 @@ body {
                   a {color: $accent;}
                   margin : auto .1rem;
                 background-color: #fff;
+                border-radius: 25px;
             }
             
         }
@@ -84,18 +85,22 @@ body {
 }
 // STYLE DU HEADER
 #header { 
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    background-color:cadetblue;
+    grid-template-areas: "text image";
+   // background-color:cadetblue;
     height: 100vh;
     max-height: 800px;
     justify-items: center;
     align-items: center;
     img {
         width: 45vw; 
+        grid-area: image;
     }
+    
     #describe {
-      
+        padding-left: 1rem;
+      grid-area: text;
         h1{
             color: tomato;
             letter-spacing: 1px;
@@ -109,6 +114,18 @@ body {
             font-weight: 600;
             font-size: 19px; 
         }
+    }
+
+
+    .clip{
+        z-index: -1;
+    position: absolute;
+    background: cadetblue;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+
+
     }
 }
 // STYLE COMMUN POUR TOUTES LES SECTIONS

@@ -58,7 +58,6 @@ body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  margin: initial;
 }
 
 #navigation ul li {
@@ -69,8 +68,8 @@ body {
   display: flex;
   padding: 1rem;
   color: #fff;
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
 }
 
 #navigation ul li span {
@@ -92,6 +91,7 @@ body {
   text-align: center;
   margin: auto .1rem;
   background-color: #fff;
+  border-radius: 25px;
 }
 
 #navigation ul li:hover span, #navigation ul li:focus span {
@@ -107,11 +107,10 @@ body {
 }
 
 #header {
+  position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[2];
-      grid-template-columns: repeat(2, 1fr);
-  background-color: cadetblue;
+      grid-template-areas: "text image";
   height: 100vh;
   max-height: 800px;
   justify-items: center;
@@ -122,6 +121,16 @@ body {
 
 #header img {
   width: 45vw;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: image;
+}
+
+#header #describe {
+  padding-left: 1rem;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: text;
 }
 
 #header #describe h1 {
@@ -137,6 +146,16 @@ body {
   line-height: 1.5;
   font-weight: 600;
   font-size: 19px;
+}
+
+#header .clip {
+  z-index: -1;
+  position: absolute;
+  background: cadetblue;
+  height: 100%;
+  width: 100%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
 }
 
 main {
@@ -382,8 +401,8 @@ footer div {
     text-align: center;
     -webkit-transform: scale(1.2);
             transform: scale(1.2);
-    -webkit-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
   }
   #navigation ul li:hover span {
     display: none;
