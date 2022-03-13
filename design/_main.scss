@@ -6,21 +6,17 @@ body {
     z-index: 20;
     display: grid;
     grid-template-columns: 20vw 1fr;
-    padding-left: 2vh;
-    padding-right: 2vh;
-    height: 25%;
     background-color: $accent;
-    position: fixed;
+    box-shadow: rgba(255, 255, 255, 0.15) 2.4px 2.4px 3.2px;
+    position: sticky;
     top: 0;
     left: 0;
-    right: 0;
-    bottom: 85%;
     #logo {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        align-items: center;
-        gap: 1px;
+        display:grid;
+        align-items: center;       
         text-decoration: none;
+        text-transform: capitalize;
+        justify-items: center;
         span {
             // Gaynako
             color: $primary;
@@ -45,12 +41,15 @@ body {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        padding: .1rem;
+     
         li {
             // Chaque menu de la navigation
-            margin-left: 2rem;
+            margin : auto .1rem;
             list-style-type: none;
             display: flex;
+            padding: 1rem;
+            color: #fff; 
+  transition: all .2s ease-out;
             span {
                 // Icon du menu
                 color: $primary;
@@ -65,15 +64,17 @@ body {
                 margin: auto 8px;
                 color: $primary;
                 font-size: 1.1em;
+                
             }
-            &:hover {
+            &:hover, &:focus {
                 // Hover de chaque menu représenté par un li
-                background-color: $primary;
-                padding: .5rem;
-                border-radius: 2rem;
+                // background-color: $primary;    
                 text-align: center;
-                span {color: $accent;}
-                a {color: $accent;}
+                  span {color: $accent;}
+                  a {color: $accent;}
+                  margin : auto .1rem;
+                background-color: #fff;
+                border-radius: 25px;
             }
             
         }
@@ -83,21 +84,23 @@ body {
     }
 }
 // STYLE DU HEADER
-#header {
-    margin-top: 5em;
+#header { 
+    position: relative;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    background: url('../imgUrl/keybord.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    grid-template-areas: "text image";
+   // background-color:cadetblue;
     height: 100vh;
+    max-height: 800px;
+    justify-items: center;
+    align-items: center;
     img {
-        width: 45vw;
-        margin-top: 2em;
+        width: 45vw; 
+        grid-area: image;
     }
+    
     #describe {
-        margin-top: 7rem;
-
+        padding-left: 1rem;
+      grid-area: text;
         h1{
             color: tomato;
             letter-spacing: 1px;
@@ -109,44 +112,163 @@ body {
             letter-spacing: .5px;
             line-height: 1.5;
             font-weight: 600;
-            font-size: 19px;
-            padding: 1em;
+            font-size: 19px; 
         }
+    }
+
+
+    .clip{
+        z-index: -1;
+    position: absolute;
+    background: cadetblue;
+    height: 100%;
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+
+
     }
 }
 // STYLE COMMUN POUR TOUTES LES SECTIONS
+
+main {
+
+margin: 0 auto;
+width: 100%;
+max-width: 1500px;
+
 section {
-    padding-top: 88px;
-    overflow: hidden;
-    font-family: Ultra;
-    display: grid;
-    align-items: center;
-    grid-template-areas: "title img"
-                          "text img";
+    padding-top: 50px;
+   div{
+       display: grid;
+       grid-template-columns:repeat(2, 1fr);
+       align-items: center;
+   }
     
     // TITRE DE LA SECTION
     h1 {
-        color: tomato;
         text-align: center;
-        font-size: 2.5rem;
-        grid-area: title;
     }
     img {
-        grid-area: img;
-        width: 65vw;
-        margin-top: 145px;
+        width:100%;
     }
     // PARAGRAPHE DE LA SECTION
     p {
-        grid-area: text;
+        
         font-family: "EB Garamond";
         color: $primary;
         font-size: 1.1rem;
         line-height: 1.5;
-        text-align: center;
-        border-radius: 15%;
-        padding: 1em;
-        word-spacing: 4px;
-        transform: translateX(100px);
+        text-align: justify;
+        border-radius: 15%;      
+        word-spacing: 4px; 
+    }
+}
+
+}
+
+
+
+
+
+
+
+
+
+/* contact form */
+section{
+    height: 100vh;
+    max-height: 800px;
+ 
+form {
+    width:90vw;
+    max-width:768px;
+    border:1px solid #ddd;
+    padding:3vw;
+    display:flex;
+    flex-direction:column;
+    border-radius:5px;
+    margin: 0 auto;
+
+  
+  
+  
+  label{
+    margin-bottom:15px;
+    position:relative; 
+  }
+  
+  input, textarea{
+    width:100%;
+    padding:10px 0px;
+    margin-top:20px;
+    border:none;
+    outline:none;
+
+
+    &::placeholder{
+opacity: 0;
+    }
+  }
+  
+  
+  
+  
+  span{
+    position:absolute;
+    top:0;
+    left:0;
+    transform:translateY(30px);
+    font-size:0.825em;
+    transition-duration:300ms;
+  }
+  button{
+    padding:15px 0px; 
+    margin-top:20px;
+    background: #3d5564;
+    color:#fff;
+    border:1px solid #fff;
+    cursor:pointer;
+    border-radius:3px;
+transition:all 1s ease-out;
+
+    &:hover,&:focus{ 
+        background: aliceblue;
+        color: #3d5564;
+    }
+  }
+  
+  label:focus-within > span,
+  input:not(:placeholder-shown) + span,
+  textarea:not(:placeholder-shown) + span{
+    color:rgb(255, 255, 255);
+    transform:translateY(0px);
+  }
+  
+  
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+
+//footer
+
+footer {
+    div{
+        display: flex;
+        height: 100vh;
+    background: cadetblue;
+    max-height: 100px;
+    justify-content: center;
+    align-items: flex-end;
     }
 }
