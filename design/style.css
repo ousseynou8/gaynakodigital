@@ -103,6 +103,7 @@
 }
 
 #header {
+  margin-top: 5em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -230,7 +231,7 @@ section p {
     display: block;
   }
   #header {
-    padding: 2em;
+    margin-top: 8em;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (1fr)[2];
