@@ -34,3 +34,30 @@
         transform: translateX(5px) rotateZ(-45deg);
     }
 }
+
+@keyframes ActionAnimate {
+    0% {
+        right: 100%;
+        content: '';
+        background-color: red;
+    }
+    25% {
+        right: 75%;
+        content: '';
+    }
+    50% {
+        right: 50%;
+        content: '';
+        background-color: green;
+        
+    }
+    75% {
+        right: 25%;
+        content: '';
+    }
+    100% {
+        right: 0;
+        content: '';
+        background-color: $secondary;
+    }
+}

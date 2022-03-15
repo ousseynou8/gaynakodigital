@@ -110,9 +110,8 @@ body {
   position: relative;
   display: -ms-grid;
   display: grid;
-  z-index: -1;
+  z-index: 0;
       grid-template-areas: "text image";
-  background-color: #734444;
   height: 100vh;
   max-height: 800px;
   justify-items: center;
@@ -138,6 +137,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 10;
 }
 
 #header #describe h1 {
@@ -150,17 +150,40 @@ body {
   text-align: center;
 }
 
-#header #describe button {
-  color: #c37857;
+#header #describe .action-btn {
   position: relative;
+  height: 3rem;
+  margin: 35px auto;
+  padding-left: .5em;
+  padding-right: .5em;
+  cursor: pointer;
+  z-index: 1;
+  border-radius: 5rem;
+  font-size: 1.5em;
+  text-align: center;
+  line-height: 1;
+  background-color: #99b27f;
+  color: #eeedbe;
+}
+
+#header #describe .action-btn:hover::after {
+  position: absolute;
+  content: 'C\'est partie !';
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  text-align: center;
   background-color: #eeedbe;
-  font-family: 'Orbitron', sans-serif;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 2;
-  border-radius: 45px;
-  padding: .3em;
-  margin: 15px auto;
+  border-radius: 25px;
+  z-index: 2;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  font-size: 1.3em;
+  padding: .2em;
+  color: #734444;
+  -webkit-animation: ActionAnimate 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+          animation: ActionAnimate 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 #header .clip {
@@ -193,14 +216,25 @@ main {
 }
 
 main section {
-  padding-top: 50px;
+  padding: 50px;
+  /* contact form */
 }
 
-main section div {
+main section div.illustration {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
       grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main section div.about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -224,13 +258,7 @@ main section p {
   word-spacing: 4px;
 }
 
-/* contact form */
-section {
-  height: 100vh;
-  max-height: 800px;
-}
-
-section form {
+main section form {
   width: 90vw;
   max-width: 768px;
   border: 1px solid #ddd;
@@ -246,12 +274,12 @@ section form {
   margin: 0 auto;
 }
 
-section form label {
+main section form label {
   margin-bottom: 15px;
   position: relative;
 }
 
-section form input, section form textarea {
+main section form input, main section form textarea {
   width: 100%;
   padding: 10px 0px;
   margin-top: 20px;
@@ -259,23 +287,23 @@ section form input, section form textarea {
   outline: none;
 }
 
-section form input::-webkit-input-placeholder, section form textarea::-webkit-input-placeholder {
+main section form input::-webkit-input-placeholder, main section form textarea::-webkit-input-placeholder {
   opacity: 0;
 }
 
-section form input:-ms-input-placeholder, section form textarea:-ms-input-placeholder {
+main section form input:-ms-input-placeholder, main section form textarea:-ms-input-placeholder {
   opacity: 0;
 }
 
-section form input::-ms-input-placeholder, section form textarea::-ms-input-placeholder {
+main section form input::-ms-input-placeholder, main section form textarea::-ms-input-placeholder {
   opacity: 0;
 }
 
-section form input::placeholder, section form textarea::placeholder {
+main section form input::placeholder, main section form textarea::placeholder {
   opacity: 0;
 }
 
-section form span {
+main section form span {
   position: absolute;
   top: 0;
   left: 0;
@@ -286,7 +314,7 @@ section form span {
           transition-duration: 300ms;
 }
 
-section form button {
+main section form button {
   padding: 15px 0px;
   margin-top: 20px;
   background: #3d5564;
@@ -298,14 +326,14 @@ section form button {
   transition: all 1s ease-out;
 }
 
-section form button:hover, section form button:focus {
+main section form button:hover, main section form button:focus {
   background: aliceblue;
   color: #3d5564;
 }
 
-section form label:focus-within > span,
-section form input:not(:placeholder-shown) + span,
-section form textarea:not(:placeholder-shown) + span {
+main section form label:focus-within > span,
+main section form input:not(:placeholder-shown) + span,
+main section form textarea:not(:placeholder-shown) + span {
   color: white;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
@@ -625,6 +653,58 @@ footer div {
   100% {
     -webkit-transform: translateX(5px) rotateZ(-45deg);
             transform: translateX(5px) rotateZ(-45deg);
+  }
+}
+
+@-webkit-keyframes ActionAnimate {
+  0% {
+    right: 100%;
+    content: '';
+    background-color: red;
+  }
+  25% {
+    right: 75%;
+    content: '';
+  }
+  50% {
+    right: 50%;
+    content: '';
+    background-color: green;
+  }
+  75% {
+    right: 25%;
+    content: '';
+  }
+  100% {
+    right: 0;
+    content: '';
+    background-color: #99b27f;
+  }
+}
+
+@keyframes ActionAnimate {
+  0% {
+    right: 100%;
+    content: '';
+    background-color: red;
+  }
+  25% {
+    right: 75%;
+    content: '';
+  }
+  50% {
+    right: 50%;
+    content: '';
+    background-color: green;
+  }
+  75% {
+    right: 25%;
+    content: '';
+  }
+  100% {
+    right: 0;
+    content: '';
+    background-color: #99b27f;
   }
 }
 /*# sourceMappingURL=style.css.map */

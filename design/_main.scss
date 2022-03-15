@@ -86,11 +86,11 @@ body {
 }
 // STYLE DU HEADER
 #header { 
+    
     position: relative;
     display: grid;
-    z-index: -1;
+    z-index: 0;
     grid-template-areas: "text image";
-    background-color: $accent;
     height: 100vh;
     max-height: 800px;
     justify-items: center;
@@ -105,6 +105,8 @@ body {
       grid-area: text;
       display: grid;
       align-items: center;
+      z-index: 10;
+      
         h1{
             color: $secondary;
             text-shadow: $primary;
@@ -114,20 +116,39 @@ body {
             width: 320px;
             text-align: center;
         }
-        button {
-            color: $supplement;
+        .action-btn {
             position: relative;
-            background-color: $primary;
-            font-family: 'Orbitron', sans-serif;
-            font-weight: 800;
-            font-size: 16px; 
-            line-height: 2;
-            border-radius: 45px;
-            padding: .3em;
-            margin: 15px auto;
+            height: 3rem;
+            margin: 35px auto;
+            padding-left: .5em;
+            padding-right: .5em;
+            cursor: pointer;
+            z-index: 1;
+            border-radius: 5rem;
+            font-size: 1.5em;
+            text-align: center;
+            line-height: 1;
+            background-color: $secondary;
+            color: $primary;
             
             &:hover {
-                
+                &::after {
+                    position: absolute;
+                    content: 'C\'est partie !';
+                    right: 0;
+                    left: 0;
+                    bottom: 0;
+                    top: 0;
+                    text-align: center;
+                    background-color: $primary;
+                    border-radius: 25px;
+                    z-index: 2;
+                    transform-origin: center;
+                    font-size: 1.3em;
+                    padding: .2em;
+                    color: $accent;
+                    animation: ActionAnimate .3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+                }
             }
         }
     }
@@ -140,7 +161,7 @@ body {
     height: 100%;
     width: 100%;
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15vw), 0 100%);
-
+    
 
     }
 
@@ -148,14 +169,12 @@ body {
         content: '';
         position:absolute;
         background: $accent;
-        // filter: brightness(106%);
         transition: all 1s;
         bottom: -1%;
         left: -4%;
         right: 45%;
         top: -10%;
         z-index: -1;
-        // border-radius: 20% 80% 31% 69% / 30% 35% 65% 70% ;
     }
 }
 // STYLE COMMUN POUR TOUTES LES SECTIONS
@@ -167,13 +186,17 @@ width: 100%;
 max-width: 1500px;
 
 section {
-    padding-top: 50px;
-   div{
+    padding: 50px;
+   div.illustration{
        display: grid;
        grid-template-columns:repeat(2, 1fr);
        align-items: center;
    }
-    
+   div.about {
+    display: grid;
+    grid-template-columns:repeat(3, 1fr);
+    align-items: center;
+   }
     // TITRE DE LA SECTION
     h1 {
         text-align: center;
@@ -192,23 +215,7 @@ section {
         border-radius: 15%;      
         word-spacing: 4px; 
     }
-}
-
-}
-
-
-
-
-
-
-
-
-
-/* contact form */
-section{
-    height: 100vh;
-    max-height: 800px;
- 
+    /* contact form */
 form {
     width:90vw;
     max-width:768px;
@@ -277,10 +284,15 @@ transition:all 1s ease-out;
   
 
 }
-
-
+}
 
 }
+
+
+
+
+
+
 
 
 
