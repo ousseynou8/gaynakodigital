@@ -38,26 +38,33 @@
 @keyframes ActionAnimate {
     0% {
         right: 100%;
-        content: '';
-        background-color: red;
+        content: '5';
+        background-color: white;
+
     }
     25% {
         right: 75%;
-        content: '';
+        content: '4';
+        background-color: white;
+
     }
     50% {
         right: 50%;
-        content: '';
-        background-color: green;
+        content: '3';
+        background-color: white;
+
         
     }
     75% {
         right: 25%;
-        content: '';
+        content: '2';
+        background-color: white;
+
     }
     100% {
         right: 0;
-        content: '';
-        background-color: $secondary;
+        content: '1';
+        background-color: white;
+
     }
 }

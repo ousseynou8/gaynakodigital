@@ -116,38 +116,37 @@ body {
             width: 320px;
             text-align: center;
         }
-        .action-btn {
-            position: relative;
+        .btnParent {
             height: 3rem;
-            margin: 35px auto;
             padding-left: .5em;
             padding-right: .5em;
             cursor: pointer;
             z-index: 1;
             border-radius: 5rem;
-            font-size: 1.5em;
             text-align: center;
-            line-height: 1;
+        }
+        .action-btn {
+            position: relative;
             background-color: $secondary;
             color: $primary;
+            margin: 5px auto;
+            font-size: 1.5em;
+            @extend .btnParent;
             
             &:hover {
                 &::after {
                     position: absolute;
                     content: 'C\'est partie !';
+                    font-size: 1.3em;
+                    @extend .btnParent;
                     right: 0;
                     left: 0;
                     bottom: 0;
                     top: 0;
-                    text-align: center;
+                    height: 40px;
                     background-color: $primary;
-                    border-radius: 25px;
-                    z-index: 2;
-                    transform-origin: center;
-                    font-size: 1.3em;
-                    padding: .2em;
                     color: $accent;
-                    animation: ActionAnimate .3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+                    animation: ActionAnimate 5s cubic-bezier(0.6, -0.28, 0.735, 0.045) ;
                 }
             }
         }

@@ -150,40 +150,37 @@ body {
   text-align: center;
 }
 
-#header #describe .action-btn {
-  position: relative;
+#header #describe .btnParent, #header #describe .action-btn, #header #describe .action-btn:hover::after {
   height: 3rem;
-  margin: 35px auto;
   padding-left: .5em;
   padding-right: .5em;
   cursor: pointer;
   z-index: 1;
   border-radius: 5rem;
-  font-size: 1.5em;
   text-align: center;
-  line-height: 1;
+}
+
+#header #describe .action-btn {
+  position: relative;
   background-color: #99b27f;
   color: #eeedbe;
+  margin: 5px auto;
+  font-size: 1.5em;
 }
 
 #header #describe .action-btn:hover::after {
   position: absolute;
   content: 'C\'est partie !';
+  font-size: 1.3em;
   right: 0;
   left: 0;
   bottom: 0;
   top: 0;
-  text-align: center;
+  height: 40px;
   background-color: #eeedbe;
-  border-radius: 25px;
-  z-index: 2;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  font-size: 1.3em;
-  padding: .2em;
   color: #734444;
-  -webkit-animation: ActionAnimate 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-          animation: ActionAnimate 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  -webkit-animation: ActionAnimate 5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+          animation: ActionAnimate 5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 #header .clip {
@@ -659,52 +656,56 @@ footer div {
 @-webkit-keyframes ActionAnimate {
   0% {
     right: 100%;
-    content: '';
-    background-color: red;
+    content: '5';
+    background-color: white;
   }
   25% {
     right: 75%;
-    content: '';
+    content: '4';
+    background-color: white;
   }
   50% {
     right: 50%;
-    content: '';
-    background-color: green;
+    content: '3';
+    background-color: white;
   }
   75% {
     right: 25%;
-    content: '';
+    content: '2';
+    background-color: white;
   }
   100% {
     right: 0;
-    content: '';
-    background-color: #99b27f;
+    content: '1';
+    background-color: white;
   }
 }
 
 @keyframes ActionAnimate {
   0% {
     right: 100%;
-    content: '';
-    background-color: red;
+    content: '5';
+    background-color: white;
   }
   25% {
     right: 75%;
-    content: '';
+    content: '4';
+    background-color: white;
   }
   50% {
     right: 50%;
-    content: '';
-    background-color: green;
+    content: '3';
+    background-color: white;
   }
   75% {
     right: 25%;
-    content: '';
+    content: '2';
+    background-color: white;
   }
   100% {
     right: 0;
-    content: '';
-    background-color: #99b27f;
+    content: '1';
+    background-color: white;
   }
 }
 /*# sourceMappingURL=style.css.map */
