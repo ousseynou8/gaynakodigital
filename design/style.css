@@ -1,8 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+ 
+@import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Sansita+Swashed:wght@300&display=swap");
 body {
-  background-color: #3d5564;
+  background-color: #734444;
+ 
 }
 
 #navigation {
@@ -11,13 +14,12 @@ body {
   display: grid;
   -ms-grid-columns: 20vw 1fr;
       grid-template-columns: 20vw 1fr;
-  background-color: #3d4d57;
-  -webkit-box-shadow: rgba(255, 255, 255, 0.15) 2.4px 2.4px 3.2px;
-          box-shadow: rgba(255, 255, 255, 0.15) 2.4px 2.4px 3.2px;
+  background-color: #734444;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
+  bottom: 0;
 }
 
 #navigation #logo {
@@ -32,13 +34,13 @@ body {
 }
 
 #navigation #logo span {
-  color: #fefefe;
+  color: #eeedbe;
   font-weight: 900;
   font-size: large;
 }
 
 #navigation #logo span code {
-  color: tomato;
+  color: #c37857;
   font-size: larger;
   font-stretch: narrower;
 }
@@ -73,7 +75,7 @@ body {
 }
 
 #navigation ul li span {
-  color: #fefefe;
+  color: #eeedbe;
   font-size: 1em;
   margin-top: 2px;
 }
@@ -83,8 +85,8 @@ body {
   font-weight: 1000;
   text-decoration: none;
   margin: auto 8px;
-  color: #fefefe;
-  font-size: 1.1em;
+  color: #eeedbe;
+  font-size: 1em;
 }
 
 #navigation ul li:hover, #navigation ul li:focus {
@@ -95,11 +97,11 @@ body {
 }
 
 #navigation ul li:hover span, #navigation ul li:focus span {
-  color: #3d4d57;
+  color: #734444;
 }
 
 #navigation ul li:hover a, #navigation ul li:focus a {
-  color: #3d4d57;
+  color: #734444;
 }
 
 #navigation #burger {
@@ -110,7 +112,9 @@ body {
   position: relative;
   display: -ms-grid;
   display: grid;
+  z-index: -1;
       grid-template-areas: "text image";
+  background-color: #734444;
   height: 100vh;
   max-height: 800px;
   justify-items: center;
@@ -127,35 +131,63 @@ body {
 }
 
 #header #describe {
-  padding-left: 1rem;
+  padding-left: 5rem;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: text;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #header #describe h1 {
-  color: tomato;
-  letter-spacing: 1px;
+  color: #99b27f;
+  text-shadow: #eeedbe;
+  margin: auto;
+  font-weight: 800;
   font-family: Ultra;
+  width: 320px;
+  text-align: center;
 }
 
-#header #describe p {
-  color: #fefefe;
-  font-family: "EB Garamond";
-  letter-spacing: .5px;
-  line-height: 1.5;
-  font-weight: 600;
-  font-size: 19px;
+#header #describe button {
+  color: #c37857;
+  position: relative;
+  background-color: #eeedbe;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 2;
+  border-radius: 45px;
+  padding: .3em;
+  margin: 15px auto;
 }
 
 #header .clip {
   z-index: -1;
   position: absolute;
-  background: cadetblue;
+  background: #eeedbe;
   height: 100%;
   width: 100%;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 45vw), 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 45vw), 0 100%);
+ 
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15vw), 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15vw), 0 100%);
+}
+
+#header::after {
+  content: '';
+  position: absolute;
+  background: #734444;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  bottom: -1%;
+  left: -4%;
+  right: 45%;
+  top: -10%;
+  z-index: -1;
+ 
 }
 
 main {
@@ -188,7 +220,7 @@ main section img {
 
 main section p {
   font-family: "EB Garamond";
-  color: #fefefe;
+  color: #eeedbe;
   font-size: 1.1rem;
   line-height: 1.5;
   text-align: justify;
@@ -300,7 +332,7 @@ footer div {
 
 @media screen and (max-width: 1044px) {
   #navigation ul li span {
-    color: #fefefe;
+    color: #eeedbe;
     font-size: .9em;
   }
   #navigation ul li a {
@@ -318,7 +350,7 @@ footer div {
 
 @media screen and (max-width: 930px) {
   #navigation ul li span {
-    color: #fefefe;
+    color: #eeedbe;
     font-size: 2em;
   }
   #navigation ul li a {
@@ -326,7 +358,7 @@ footer div {
     display: none;
   }
   #navigation ul li:hover {
-    background-color: #fefefe;
+    background-color: #eeedbe;
     font-size: .7em;
     text-align: center;
     -webkit-transform: scale(1.2);
@@ -359,7 +391,7 @@ footer div {
     font-family: Ultra;
   }
   #header #describe p {
-    color: #fefefe;
+    color: #eeedbe;
     font-family: "EB Garamond";
     letter-spacing: .5px;
     line-height: 1.5;
@@ -389,14 +421,14 @@ footer div {
     display: none;
   }
   #navigation ul li span {
-    color: #fefefe;
+    color: #eeedbe;
     font-size: 2em;
   }
   #navigation ul li a {
     margin: auto 12px;
   }
   #navigation ul li:hover {
-    background-color: #fefefe;
+    background-color: #eeedbe;
     font-size: .9em;
     text-align: center;
     -webkit-transform: scale(1.2);
@@ -425,7 +457,7 @@ footer div {
   #navigation #burger .burg {
     width: 19px;
     height: 2.8px;
-    background-color: #fefefe;
+    background-color: #eeedbe;
     margin-top: 4px;
   }
   .menuHover {
@@ -441,7 +473,7 @@ footer div {
     right: -6%;
     left: 0;
     z-index: -15;
-    background-color: #3d4d57;
+    background-color: #734444;
     -webkit-transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
   }

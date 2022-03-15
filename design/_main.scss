@@ -1,5 +1,7 @@
 body {
-    background-color: $secondary;
+ 
+    background-color: $accent;
+
 }
 // Ici c'est le navbar
 #navigation {
@@ -7,10 +9,12 @@ body {
     display: grid;
     grid-template-columns: 20vw 1fr;
     background-color: $accent;
-    box-shadow: rgba(255, 255, 255, 0.15) 2.4px 2.4px 3.2px;
+    // box-shadow: rgba(255, 255, 255, 0.15) 2.4px 2.4px 3.2px;
     position: sticky;
     top: 0;
     left: 0;
+    bottom: 0;
+
     #logo {
         display:grid;
         align-items: center;       
@@ -25,7 +29,7 @@ body {
             // transform: translateX(-10px);
             code {
                 // digital
-                color: tomato;
+                color: $supplement;
                 font-size: larger;
                 font-stretch: narrower;
             }
@@ -41,7 +45,6 @@ body {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-     
         li {
             // Chaque menu de la navigation
             margin : auto .1rem;
@@ -63,7 +66,7 @@ body {
                 text-decoration: none;
                 margin: auto 8px;
                 color: $primary;
-                font-size: 1.1em;
+                font-size: 1em;
                 
             }
             &:hover, &:focus {
@@ -87,8 +90,9 @@ body {
 #header { 
     position: relative;
     display: grid;
+    z-index: -1;
     grid-template-areas: "text image";
-   // background-color:cadetblue;
+    background-color: $accent;
     height: 100vh;
     max-height: 800px;
     justify-items: center;
@@ -99,20 +103,36 @@ body {
     }
     
     #describe {
-        padding-left: 1rem;
-        grid-area: text;
+ 
+      padding-left: 5rem;
+      grid-area: text;
+      display: grid;
+      align-items: center;
+
         h1{
-            color: tomato;
-            letter-spacing: 1px;
+            color: $secondary;
+            text-shadow: $primary;
+            margin: auto;
+            font-weight: 800;
             font-family: Ultra;
+            width: 320px;
+            text-align: center;
         }
-        p {
-            color: $primary;
-            font-family: "EB Garamond";
-            letter-spacing: .5px;
-            line-height: 1.5;
-            font-weight: 600;
-            font-size: 19px; 
+        button {
+            color: $supplement;
+            position: relative;
+            background-color: $primary;
+            font-family: 'Orbitron', sans-serif;
+            font-weight: 800;
+            font-size: 16px; 
+            line-height: 2;
+            border-radius: 45px;
+            padding: .3em;
+            margin: 15px auto;
+            
+            &:hover {
+                
+            }
         }
     }
 
@@ -120,12 +140,28 @@ body {
     .clip{
         z-index: -1;
     position: absolute;
-    background: cadetblue;
+    background: $primary;
     height: 100%;
     width: 100%;
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 45vw), 0 100%);
+ 
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15vw), 0 100%);
 
 
+
+    }
+
+    &::after {
+        content: '';
+        position:absolute;
+        background: $accent;
+        // filter: brightness(106%);
+        transition: all 1s;
+        bottom: -1%;
+        left: -4%;
+        right: 45%;
+        top: -10%;
+        z-index: -1;
+        // border-radius: 20% 80% 31% 69% / 30% 35% 65% 70% ;
     }
 }
 // STYLE COMMUN POUR TOUTES LES SECTIONS
