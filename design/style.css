@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+ 
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Sansita+Swashed:wght@300&display=swap");
 body {
   background-color: #734444;
+ 
 }
 
 #navigation {
@@ -169,6 +171,7 @@ body {
   background: #eeedbe;
   height: 100%;
   width: 100%;
+ 
   -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15vw), 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15vw), 0 100%);
 }
@@ -184,6 +187,7 @@ body {
   right: 45%;
   top: -10%;
   z-index: -1;
+ 
 }
 
 main {
