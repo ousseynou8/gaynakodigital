@@ -1,6 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
+body {
+  background-color: #3d5564;
+}
+
 #navigation {
   z-index: 20;
   display: -ms-grid;
@@ -150,8 +154,8 @@
   background: cadetblue;
   height: 100%;
   width: 100%;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5vw), 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 45vw), 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% calc(100% - 45vw), 0 100%);
 }
 
 main {
