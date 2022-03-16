@@ -200,6 +200,7 @@ section {
     display: grid;
     grid-template-columns:repeat(3, 1fr);
     align-items: center;
+    gap: 2em;
    }
     // TITRE DE LA SECTION
     h1 {
@@ -207,6 +208,7 @@ section {
     }
     img {
         width:100%;
+        border-radius: 25%;
     }
     // PARAGRAPHE DE LA SECTION
     p {

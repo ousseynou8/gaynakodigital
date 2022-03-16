@@ -235,6 +235,7 @@ main section div.about {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  gap: 2em;
 }
 
 main section h1 {
@@ -243,6 +244,7 @@ main section h1 {
 
 main section img {
   width: 100%;
+  border-radius: 25%;
 }
 
 main section p {
