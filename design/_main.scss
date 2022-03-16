@@ -1,5 +1,7 @@
 body {
+ 
     background-color: $accent;
+
 }
 // Ici c'est le navbar
 #navigation {
@@ -71,9 +73,9 @@ body {
                 // Hover de chaque menu représenté par un li
                 // background-color: $primary;    
                 text-align: center;
-                  span {color: $accent;}
-                  a {color: $accent;}
-                  margin : auto .1rem;
+                span {color: $accent;}
+                a {color: $accent;}
+                margin : auto .1rem;
                 background-color: #fff;
                 border-radius: 25px;
             }
@@ -101,12 +103,14 @@ body {
     }
     
     #describe {
+ 
       padding-left: 5rem;
       grid-area: text;
       display: grid;
-      align-items: center;
+      align-items: center; 
       z-index: 10;
       
+ 
         h1{
             color: $secondary;
             text-shadow: $primary;
@@ -159,8 +163,10 @@ body {
     background: $primary;
     height: 100%;
     width: 100%;
+ 
     clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15vw), 0 100%);
     
+
 
     }
 
