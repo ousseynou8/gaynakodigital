@@ -207,9 +207,18 @@ section {
     h1 {
         text-align: center;
     }
-    img {
+    img.acteur {
         width:100%;
         border-radius: 25%;
+        
+    }
+    img.dooro {
+        transform: rotateY(0deg);
+        // animation: dooroAnimate 10s infinite alternate cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    }
+    img.fofana {
+        transform: rotateY(180deg);
+        // animation: fofAnimate 10s infinite alternate cubic-bezier(0.6, -0.28, 0.735, 0.045);
     }
     // PARAGRAPHE DE LA SECTION
     p {
