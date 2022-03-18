@@ -191,6 +191,65 @@ width: 100%;
 max-width: 1500px;
 
 section {
+    
+    .services {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        gap: 18px;
+        .card {
+            margin: auto;
+            border: 1px thin $secondary;
+            overflow: hidden;
+            border-radius: 15px;
+            width: 300px;
+            transition: all .5s ease-in-out;
+
+            h2 {
+                color: $primary;
+                // background-color: $accent;
+                // border: 1px solid $secondary;
+                padding-top: 20px;
+                margin-top: -15px;
+                margin-bottom: 0;
+                text-align: center;
+                border-radius: 50px;
+                // border-bottom: 1px solid $subgc;
+            }
+            img {
+                width: 100%;
+                min-height: 5rem;
+                backdrop-filter: brightness(25%);
+                // border-bottom-left-radius: 1rem;
+            }
+            P {
+                display: none;
+            }
+            &:hover {
+            background-color: $subgc;
+            // background-color: blue;
+            border: 1px solid gray ;
+                img{
+                    width: 100%;
+                    height: 6rem;
+                    transform: scale(1.3) rotateZ(3deg);
+                    transition: all .3s ease-in-out;
+                }
+                p {
+                    display: block;
+                    margin: 5px;
+                    padding: 10px;
+                }
+                h2 {
+                    padding: .35em 0;
+                    margin: 0;
+                    border-radius: 0;
+                    background-color:$secondary;
+                    transform: scale(1.5) rotateZ(-5deg);
+                    transition: all .2s ease-in-out;
+                }
+            }
+        }
+    }
     padding: 50px;
    div.illustration{
        display: grid;
@@ -206,6 +265,8 @@ section {
     // TITRE DE LA SECTION
     h1 {
         text-align: center;
+        color: $secondary;
+
     }
     img.acteur {
         width:100%;

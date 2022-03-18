@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Orbitron&family=Sansita+Swashed:wght@300&display=swap");
 body {
-  background-color: #734444;
+  background-color: #5f3e3e;
 }
 
 #navigation {
@@ -12,7 +12,7 @@ body {
   display: grid;
   -ms-grid-columns: 20vw 1fr;
       grid-template-columns: 20vw 1fr;
-  background-color: #734444;
+  background-color: #5f3e3e;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -95,11 +95,11 @@ body {
 }
 
 #navigation ul li:hover span, #navigation ul li:focus span {
-  color: #734444;
+  color: #5f3e3e;
 }
 
 #navigation ul li:hover a, #navigation ul li:focus a {
-  color: #734444;
+  color: #5f3e3e;
 }
 
 #navigation #burger {
@@ -178,7 +178,7 @@ body {
   top: 0;
   height: 40px;
   background-color: #eeedbe;
-  color: #734444;
+  color: #5f3e3e;
   -webkit-animation: ActionAnimate 5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
           animation: ActionAnimate 5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
@@ -196,7 +196,7 @@ body {
 #header::after {
   content: '';
   position: absolute;
-  background: #734444;
+  background: #5f3e3e;
   -webkit-transition: all 1s;
   transition: all 1s;
   bottom: -1%;
@@ -215,6 +215,75 @@ main {
 main section {
   padding: 50px;
   /* contact form */
+}
+
+main section .services {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+main section .services .card {
+  margin: auto;
+  border: 1px thin #99b27f;
+  overflow: hidden;
+  border-radius: 15px;
+  width: 300px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+main section .services .card h2 {
+  color: #eeedbe;
+  padding-top: 20px;
+  margin-top: -15px;
+  margin-bottom: 0;
+  text-align: center;
+  border-radius: 50px;
+}
+
+main section .services .card img {
+  width: 100%;
+  min-height: 5rem;
+  -webkit-backdrop-filter: brightness(25%);
+          backdrop-filter: brightness(25%);
+}
+
+main section .services .card P {
+  display: none;
+}
+
+main section .services .card:hover {
+  background-color: #6b4343;
+  border: 1px solid gray;
+}
+
+main section .services .card:hover img {
+  width: 100%;
+  height: 6rem;
+  -webkit-transform: scale(1.3) rotateZ(3deg);
+          transform: scale(1.3) rotateZ(3deg);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+main section .services .card:hover p {
+  display: block;
+  margin: 5px;
+  padding: 10px;
+}
+
+main section .services .card:hover h2 {
+  padding: .35em 0;
+  margin: 0;
+  border-radius: 0;
+  background-color: #99b27f;
+  -webkit-transform: scale(1.5) rotateZ(-5deg);
+          transform: scale(1.5) rotateZ(-5deg);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 main section div.illustration {
@@ -240,6 +309,7 @@ main section div.about {
 
 main section h1 {
   text-align: center;
+  color: #99b27f;
 }
 
 main section img.acteur {
@@ -506,7 +576,7 @@ footer div {
     right: -6%;
     left: 0;
     z-index: -15;
-    background-color: #734444;
+    background-color: #5f3e3e;
     -webkit-transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
   }
