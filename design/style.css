@@ -61,15 +61,15 @@ body {
 }
 
 #navigation ul li {
-  margin: auto .1rem;
+  margin: auto 0.1rem;
   list-style-type: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   padding: 1rem;
   color: #fff;
-  -webkit-transition: all .2s ease-out;
-  transition: all .2s ease-out;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 #navigation ul li span {
@@ -89,7 +89,7 @@ body {
 
 #navigation ul li:hover, #navigation ul li:focus {
   text-align: center;
-  margin: auto .1rem;
+  margin: auto 0.1rem;
   background-color: #fff;
   border-radius: 25px;
 }
@@ -152,8 +152,8 @@ body {
 
 #header #describe .btnParent, #header #describe .action-btn, #header #describe .action-btn:hover::after {
   height: 3rem;
-  padding-left: .5em;
-  padding-right: .5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   cursor: pointer;
   z-index: 1;
   border-radius: 5rem;
@@ -170,7 +170,7 @@ body {
 
 #header #describe .action-btn:hover::after {
   position: absolute;
-  content: 'C\'est partie !';
+  content: "C'est partie !";
   font-size: 1.3em;
   right: 0;
   left: 0;
@@ -187,6 +187,7 @@ body {
   z-index: -1;
   position: absolute;
   background: #eeedbe;
+  border-radius: 2%;
   height: 100%;
   width: 100%;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15vw), 0 100%);
@@ -194,7 +195,7 @@ body {
 }
 
 #header::after {
-  content: '';
+  content: "";
   position: absolute;
   background: #5f3e3e;
   -webkit-transition: all 1s;
@@ -220,9 +221,21 @@ main section {
 main section .services {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[4];
-      grid-template-columns: repeat(4, 1fr);
-  gap: 18px;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  row-gap: 40px;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-left: 0.3em solid #6b4343;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-right: 0.3em solid #6b4343;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding: 30px;
 }
 
 main section .services .card {
@@ -230,9 +243,10 @@ main section .services .card {
   border: 1px thin #99b27f;
   overflow: hidden;
   border-radius: 15px;
-  width: 300px;
-  -webkit-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
+  width: 40cvw;
+  height: 50vh;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 main section .services .card h2 {
@@ -246,6 +260,7 @@ main section .services .card h2 {
 
 main section .services .card img {
   width: 100%;
+  height: 40vh;
   min-height: 5rem;
   -webkit-backdrop-filter: brightness(25%);
           backdrop-filter: brightness(25%);
@@ -258,32 +273,39 @@ main section .services .card P {
 main section .services .card:hover {
   background-color: #6b4343;
   border: 1px solid gray;
+  position: relative;
 }
 
 main section .services .card:hover img {
   width: 100%;
-  height: 6rem;
-  -webkit-transform: scale(1.3) rotateZ(3deg);
-          transform: scale(1.3) rotateZ(3deg);
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
+  height: 10vh;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+  -webkit-transform: scale(1.5) rotateZ(3deg) rotateY(30deg);
+          transform: scale(1.5) rotateZ(3deg) rotateY(30deg);
+  -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 main section .services .card:hover p {
   display: block;
-  margin: 5px;
-  padding: 10px;
+  margin-top: 3vh;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
 main section .services .card:hover h2 {
-  padding: .35em 0;
-  margin: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0.35em 0;
   border-radius: 0;
   background-color: #99b27f;
-  -webkit-transform: scale(1.5) rotateZ(-5deg);
-          transform: scale(1.5) rotateZ(-5deg);
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  -webkit-transform: scale(1.1) rotateZ(-2deg);
+          transform: scale(1.1) rotateZ(-2deg);
+  -webkit-transition: all 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transition: all 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
 main section div.illustration {
@@ -358,7 +380,8 @@ main section form label {
   position: relative;
 }
 
-main section form input, main section form textarea {
+main section form input,
+main section form textarea {
   width: 100%;
   padding: 10px 0px;
   margin-top: 20px;
@@ -366,19 +389,23 @@ main section form input, main section form textarea {
   outline: none;
 }
 
-main section form input::-webkit-input-placeholder, main section form textarea::-webkit-input-placeholder {
+main section form input::-webkit-input-placeholder,
+main section form textarea::-webkit-input-placeholder {
   opacity: 0;
 }
 
-main section form input:-ms-input-placeholder, main section form textarea:-ms-input-placeholder {
+main section form input:-ms-input-placeholder,
+main section form textarea:-ms-input-placeholder {
   opacity: 0;
 }
 
-main section form input::-ms-input-placeholder, main section form textarea::-ms-input-placeholder {
+main section form input::-ms-input-placeholder,
+main section form textarea::-ms-input-placeholder {
   opacity: 0;
 }
 
-main section form input::placeholder, main section form textarea::placeholder {
+main section form input::placeholder,
+main section form textarea::placeholder {
   opacity: 0;
 }
 
