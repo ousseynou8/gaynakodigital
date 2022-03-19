@@ -283,8 +283,8 @@ main section .services .card:hover img {
   border-bottom-right-radius: 50%;
   -webkit-transform: scale(1.5) rotateZ(3deg) rotateY(30deg);
           transform: scale(1.5) rotateZ(3deg) rotateY(30deg);
-  -webkit-transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  -webkit-transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 main section .services .card:hover p {
