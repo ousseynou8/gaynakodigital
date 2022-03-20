@@ -38,7 +38,7 @@ body {
 }
 
 #navigation #logo span code {
-  color: #c37857;
+  color: #f2eee3;
   font-size: larger;
   font-stretch: narrower;
 }
@@ -179,7 +179,7 @@ body {
   top: 0;
   height: 40px;
   background-color: #3baea0;
-  color: #dffcb5;
+  color: #3baea0;
   -webkit-animation: ActionAnimate 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
           animation: ActionAnimate 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
@@ -203,12 +203,30 @@ main {
 }
 
 main section {
-  margin: 10px;
+  padding-top: 2rem;
   padding: 50px;
   /* contact form */
 }
 
-main section .services {
+main section fieldset {
+  border: none;
+  border-top: 2px solid #3baea0;
+  border-top-style: groove;
+  border-top-width: .7em;
+}
+
+main section fieldset legend {
+  background-color: #3baea0;
+  padding: 0em 15em;
+  border-radius: 3em 1em;
+  margin-bottom: 3rem;
+}
+
+main section fieldset legend h1 {
+  color: #f2eee3;
+}
+
+main section fieldset .services {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -222,48 +240,47 @@ main section .services {
   padding: 30px;
 }
 
-main section .services .card {
+main section fieldset .services .card {
   margin: auto;
-  border: 1px thin #c37857;
-  background-color: #f2eee3;
+  position: relative;
   overflow: hidden;
   border-radius: 15px;
-  width: 40cvw;
   height: 50vh;
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
 
-main section .services .card h2 {
-  color: #f2eee3;
+main section fieldset .services .card h2 {
+  position: absolute;
+  background-color: #3baea0;
   padding-top: 20px;
-  margin-top: -15px;
+  padding-bottom: 20px;
   margin-bottom: 0;
   text-align: center;
-  border-radius: 50px;
+  color: #f2eee3;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
-main section .services .card img {
+main section fieldset .services .card img {
   width: 100%;
   height: 40vh;
   min-height: 5rem;
-  -webkit-backdrop-filter: brightness(25%);
-          backdrop-filter: brightness(25%);
+  background-color: #f2eee3;
   -webkit-transform: scale(1.6);
           transform: scale(1.6);
 }
 
-main section .services .card P {
+main section fieldset .services .card P {
   display: none;
 }
 
-main section .services .card:hover {
+main section fieldset .services .card:hover {
   background-color: #f2eee3;
-  border: 1px solid gray;
-  position: relative;
 }
 
-main section .services .card:hover img {
+main section fieldset .services .card:hover img {
   background-color: #3baea0;
   width: 100%;
   height: 10vh;
@@ -275,24 +292,21 @@ main section .services .card:hover img {
   transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-main section .services .card:hover p {
+main section fieldset .services .card:hover p {
   display: block;
   color: #069a8e;
   background-color: #f2eee3;
-  margin-top: 3vh;
-  padding-left: 10px;
-  padding-right: 10px;
+  font-size: 1.15em;
+  padding: 0 1em;
 }
 
-main section .services .card:hover h2 {
+main section fieldset .services .card:hover h2 {
   position: absolute;
   left: 0;
   right: 0;
   bottom: -5px;
   padding: 0.35em 0;
-  border-radius: 0;
   background-color: #3baea0;
-  color: #069a8e;
   -webkit-transform: scale(1.1) rotateZ(-2deg);
           transform: scale(1.1) rotateZ(-2deg);
   -webkit-transition: all 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
@@ -318,11 +332,6 @@ main section div.about {
       -ms-flex-align: center;
           align-items: center;
   gap: 2em;
-}
-
-main section h1 {
-  text-align: center;
-  color: #069a8e;
 }
 
 main section img.acteur {
@@ -353,7 +362,6 @@ main section p {
 main section form {
   width: 90vw;
   max-width: 768px;
-  border: 1px solid #ddd;
   padding: 3vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -373,11 +381,14 @@ main section form label {
 
 main section form input,
 main section form textarea {
-  width: 100%;
+  width: 70%;
   padding: 10px 0px;
   margin-top: 20px;
   border: none;
   outline: none;
+  display: block;
+  margin: 10px auto;
+  border-radius: .7rem;
 }
 
 main section form input::-webkit-input-placeholder,
@@ -441,7 +452,7 @@ footer div {
   display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  background: cadetblue;
+  background: #3baea0;
   max-height: 100px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -594,7 +605,7 @@ footer div {
     right: -6%;
     left: 0;
     z-index: -15;
-    background-color: #dffcb5;
+    background-color: #3baea0;
     -webkit-transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
   }
@@ -765,7 +776,7 @@ footer div {
   50% {
     right: 50%;
     content: "3";
-    background-color: #dffcb5;
+    background-color: #3baea0;
   }
   75% {
     right: 25%;
@@ -789,7 +800,7 @@ footer div {
   50% {
     right: 50%;
     content: "3";
-    background-color: #dffcb5;
+    background-color: #3baea0;
   }
   75% {
     right: 25%;

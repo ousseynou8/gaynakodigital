@@ -27,7 +27,7 @@ body {
       // transform: translateX(-10px);
       code {
         // digital
-        color: $supplement;
+        color: $primary;
         font-size: larger;
         font-stretch: narrower;
       }
@@ -147,7 +147,7 @@ body {
           bottom: 0;
           top: 0;
           height: 40px;
-          background-color: $subgc;
+          background-color: $accent;
           color: $accent;
           animation: ActionAnimate .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
         }
@@ -193,93 +193,95 @@ body {
 
 main {
   margin: 0 auto;
-  // max-width: 1024px;
   background-color: $secondary;
   section {
-    margin: 10px;
-    // border-left: .3em solid $subgc;
-    // border-top-left-radius: 30px;
-    // border-bottom-left-radius: 30px;
-    // border-right: 0.3em solid $subgc;
-    // border-top-right-radius: 30px;
-    // border-bottom-right-radius: 30px;
-    .services {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      row-gap: 40px;
-      column-gap: 10px;
-      align-items: center;
-    //   border-left: 0.3em solid $subgc;
-    //   border-top-left-radius: 30px;
-    //   border-bottom-left-radius: 30px;
-    //   border-right: 0.3em solid $subgc;
-    //   border-top-right-radius: 30px;
-    //   border-bottom-right-radius: 30px;
-      padding: 30px;
-      .card {
-        margin: auto;
-        border: 1px thin $supplement;
-        background-color: $primary;
-        overflow: hidden;
-        border-radius: 15px;
-        width: 40cvw;
-        height: 50vh;
-        transition: all 0.5s ease-in-out;
-
-        h2 {
+    padding-top: 2rem;
+    fieldset {
+      border: none;
+      border-top: 2px solid $accent;
+      border-top-style: groove;
+      border-top-width: .7em;
+      // border-radius: 3em;
+      legend {
+        background-color: $accent;
+        padding: 0em 15em;
+        border-radius: 3em 1em;
+        h1 {
           color: $primary;
-          padding-top: 20px;
-          margin-top: -15px;
-          margin-bottom: 0;
-          text-align: center;
-          border-radius: 50px;
         }
-        img {
-          width: 100%;
-          height: 40vh;
-          min-height: 5rem;
-          backdrop-filter: brightness(25%);
-          transform: scale(1.6);
-        }
-        P {
-          display: none;
-        }
-        &:hover {
-          background-color: $primary;
-          border: 1px solid gray;
+        margin-bottom: 3rem;
+      }
+      .services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 40px;
+        column-gap: 10px;
+        align-items: center;
+        padding: 30px;
+        .card {
+          margin: auto;
           position: relative;
-          img {
-              background-color: $subgc;
-            width: 100%;
-            height: 10vh;
-            border-bottom-left-radius: 50%;
-            border-bottom-right-radius: 50%;
-            transform: scale(1.5) rotateZ(3deg) rotateY(30deg);
-            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-          }
-          p {
-            display: block;
-            color: $secondary;
-            background-color: $primary;
-            margin-top: 3vh;
-            padding-left: 10px;
-            padding-right: 10px;
-          }
+          overflow: hidden;
+          border-radius: 15px;
+          height: 50vh;
+          transition: all 0.5s ease-in-out;
+  
           h2 {
             position: absolute;
+            background-color: $accent;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            margin-bottom: 0;
+            text-align: center;
+            color: $primary;
+            bottom: 0;
             left: 0;
             right: 0;
-            bottom: -5px;
-            padding: 0.35em 0;
-            border-radius: 0;
-            background-color: $subgc;
-            color: $secondary;
-            transform: scale(1.1) rotateZ(-2deg);
-            transition: all 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+          }
+          img {
+            width: 100%;
+            height: 40vh;
+            min-height: 5rem;
+            background-color: $primary;
+            transform: scale(1.6);
+          }
+          P {
+            display: none;
+          }
+          &:hover {
+            background-color: $primary;
+            
+            img {
+                background-color: $accent;
+              width: 100%;
+              height: 10vh;
+              border-bottom-left-radius: 50%;
+              border-bottom-right-radius: 50%;
+              transform: scale(1.5) rotateZ(3deg) rotateY(30deg);
+              transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            }
+            p {
+              display: block;
+              color: $secondary;
+              background-color: $primary;
+              font-size: 1.15em;
+              padding: 0 1em;
+            }
+            h2 {
+              position: absolute;
+              left: 0;
+              right: 0;
+              bottom: -5px;
+              padding: 0.35em 0;
+              background-color: $accent;
+              transform: scale(1.1) rotateZ(-2deg);
+              transition: all 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+            }
           }
         }
       }
     }
+
     padding: 50px;
     div.illustration {
       display: grid;
@@ -293,10 +295,7 @@ main {
       gap: 2em;
     }
     // TITRE DE LA SECTION
-    h1 {
-      text-align: center;
-      color: $secondary;
-    }
+    
     img.acteur {
       width: 100%;
       border-radius: 25%;
@@ -323,7 +322,6 @@ main {
     form {
       width: 90vw;
       max-width: 768px;
-      border: 1px solid #ddd;
       padding: 3vw;
       display: flex;
       flex-direction: column;
@@ -337,12 +335,14 @@ main {
 
       input,
       textarea {
-        width: 100%;
+        width: 70%;
         padding: 10px 0px;
         margin-top: 20px;
         border: none;
         outline: none;
-
+        display: block;
+        margin: 10px auto;
+        border-radius: .7rem;
         &::placeholder {
           opacity: 0;
         }
@@ -389,7 +389,7 @@ footer {
   div {
     display: flex;
     height: 100vh;
-    background: cadetblue;
+    background: $accent;
     max-height: 100px;
     justify-content: center;
     align-items: flex-end;
