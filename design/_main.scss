@@ -1,12 +1,12 @@
 body {
-  background-color: $accent;
+  background-color: $primary;
 }
 // Ici c'est le navbar
 #navigation {
   z-index: 20;
   display: grid;
   grid-template-columns: 20vw 1fr;
-  background-color: $accent;
+  background-color: $secondary;
   // box-shadow: rgba(255, 255, 255, 0.15) 2.4px 2.4px 3.2px;
   position: sticky;
   top: 0;
@@ -72,13 +72,13 @@ body {
         // background-color: $primary;
         text-align: center;
         span {
-          color: $accent;
+          color: $secondary;
         }
         a {
-          color: $accent;
+          color: $secondary;
         }
         margin: auto 0.1rem;
-        background-color: #fff;
+        background-color: $primary;
         border-radius: 25px;
       }
     }
@@ -91,14 +91,15 @@ body {
 #header {
   position: relative;
   display: grid;
-  z-index: 0;
+  z-index: 1;
   grid-template-areas: "text image";
   height: 100vh;
   max-height: 800px;
   justify-items: center;
   align-items: center;
+  background-color: $primary;
   img {
-    width: 45vw;
+    width: 35vw;
     grid-area: image;
   }
 
@@ -146,61 +147,79 @@ body {
           bottom: 0;
           top: 0;
           height: 40px;
-          background-color: $primary;
+          background-color: $subgc;
           color: $accent;
-          animation: ActionAnimate 5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+          animation: ActionAnimate .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
         }
       }
     }
   }
 
-  .clip {
-    z-index: -1;
-    position: absolute;
-    background: $primary;
-    border-radius: 2%;
-    height: 100%;
-    width: 100%;
+  // .clip {
+  //   z-index: -1;
+  //   position: absolute;
+  //   background: $secondary;
+  //   height: 100%;
+  //   width: 100%;
 
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15vw), 0 100%);
-  }
+  //   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15vw), 0 100%);
+  // }
 
+  // &::after {
+  //   content: "";
+  //   position: absolute;
+  //   background: $accent;
+  //   transition: all 1s;
+  //   bottom: -1%;
+  //   left: -4%;
+  //   right: 45%;
+  //   top: -10%;
+  //   z-index: -1;
+  //   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15vw), 0 100%);
+  // }
   &::after {
-    content: "";
+    content:'';
     position: absolute;
-    background: $accent;
-    transition: all 1s;
-    bottom: -1%;
-    left: -4%;
-    right: 45%;
-    top: -10%;
-    z-index: -1;
+    left: 35%;
+    right: 0;
+    top: -1%;
+    bottom: 0;
+    background-color: $secondary;
+    z-index: -5;
+    clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 14% 49%);
   }
 }
 // STYLE COMMUN POUR TOUTES LES SECTIONS
 
 main {
   margin: 0 auto;
-  width: 100%;
-  max-width: 1500px;
-
+  // max-width: 1024px;
+  background-color: $secondary;
   section {
+    margin: 10px;
+    // border-left: .3em solid $subgc;
+    // border-top-left-radius: 30px;
+    // border-bottom-left-radius: 30px;
+    // border-right: 0.3em solid $subgc;
+    // border-top-right-radius: 30px;
+    // border-bottom-right-radius: 30px;
     .services {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       row-gap: 40px;
       column-gap: 10px;
       align-items: center;
-      border-left: 0.3em solid $subgc;
-      border-top-left-radius: 30px;
-      border-bottom-left-radius: 30px;
-      border-right: 0.3em solid $subgc;
-      border-top-right-radius: 30px;
-      border-bottom-right-radius: 30px;
+    //   border-left: 0.3em solid $subgc;
+    //   border-top-left-radius: 30px;
+    //   border-bottom-left-radius: 30px;
+    //   border-right: 0.3em solid $subgc;
+    //   border-top-right-radius: 30px;
+    //   border-bottom-right-radius: 30px;
       padding: 30px;
       .card {
         margin: auto;
-        border: 1px thin $secondary;
+        border: 1px thin $supplement;
+        background-color: $primary;
         overflow: hidden;
         border-radius: 15px;
         width: 40cvw;
@@ -220,15 +239,17 @@ main {
           height: 40vh;
           min-height: 5rem;
           backdrop-filter: brightness(25%);
+          transform: scale(1.6);
         }
         P {
           display: none;
         }
         &:hover {
-          background-color: $subgc;
+          background-color: $primary;
           border: 1px solid gray;
           position: relative;
           img {
+              background-color: $subgc;
             width: 100%;
             height: 10vh;
             border-bottom-left-radius: 50%;
@@ -238,6 +259,8 @@ main {
           }
           p {
             display: block;
+            color: $secondary;
+            background-color: $primary;
             margin-top: 3vh;
             padding-left: 10px;
             padding-right: 10px;
@@ -246,10 +269,11 @@ main {
             position: absolute;
             left: 0;
             right: 0;
-            bottom: 0;
+            bottom: -5px;
             padding: 0.35em 0;
             border-radius: 0;
-            background-color: $secondary;
+            background-color: $subgc;
+            color: $secondary;
             transform: scale(1.1) rotateZ(-2deg);
             transition: all 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
           }
