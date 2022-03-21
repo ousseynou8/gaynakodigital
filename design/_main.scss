@@ -202,10 +202,7 @@ main {
       border-top-style: groove;
       border-top-width: .7em;
       // border-radius: 3em;
-      legend {
-        background-color: $accent;
-        padding: 0em 15em;
-        border-radius: 3em 1em;
+   
         h1 {
           color: $primary;
         }
@@ -318,68 +315,68 @@ main {
       border-radius: 15%;
       word-spacing: 4px;
     }
-    /* contact form */
+    /* contact form */ 
+
+
     form {
-      width: 90vw;
-      max-width: 768px;
-      padding: 3vw;
-      display: flex;
-      flex-direction: column;
-      border-radius: 5px;
+      width:50%;
+      max-width:768px; 
+      padding:3vw;
+      display:flex;
+      flex-direction:column;
+      border-radius:5px;
       margin: 0 auto;
-
-      label {
-        margin-bottom: 15px;
-        position: relative;
-      }
-
-      input,
-      textarea {
-        width: 70%;
-        padding: 10px 0px;
-        margin-top: 20px;
-        border: none;
-        outline: none;
-        display: block;
-        margin: 10px auto;
-        border-radius: .7rem;
-        &::placeholder {
-          opacity: 0;
-        }
-      }
-
-      span {
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translateY(30px);
-        font-size: 0.825em;
-        transition-duration: 300ms;
-      }
-      button {
-        padding: 15px 0px;
-        margin-top: 20px;
-        background: #3d5564;
-        color: #fff;
-        border: 1px solid #fff;
-        cursor: pointer;
-        border-radius: 3px;
-        transition: all 1s ease-out;
-
-        &:hover,
-        &:focus {
-          background: aliceblue;
-          color: #3d5564;
-        }
-      }
-
-      label:focus-within > span,
-      input:not(:placeholder-shown) + span,
-      textarea:not(:placeholder-shown) + span {
-        color: rgb(255, 255, 255);
-        transform: translateY(0px);
-      }
+    }    
+    label{
+      margin-bottom:15px;
+      position:relative; 
     }
+    
+    input, textarea{
+      width:100%;
+      padding:10px 0px;
+      margin-top:20px;
+      border:none;
+      outline:none;
+      border-radius:7px;
+
+      
+    }
+    
+    input::placeholder, textarea::placeholder{
+      opacity:0;
+    }
+    
+    
+    span{
+      position:absolute;
+      top:0;
+      left:5px;
+      transform:translateY(30px);
+      font-size:0.825em;
+      transition-duration:300ms;
+    }
+    button{
+      padding:15px 0px; 
+      margin-top:20px;
+      background:#3baea0;
+      color:#fff;
+      border:1px solid #3baea0;
+      cursor:pointer;
+      border-radius:3px;
+      &:hover, &:focus { background:#fff;color:#3baea0}
+    }
+    
+    label:focus-within > span,
+    input:not(:placeholder-shown) + span,
+    textarea:not(:placeholder-shown) + span{
+      color:#fff;
+      transform:translateY(0px);
+    }
+    
+    
+
+
   }
 }
 

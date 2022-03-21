@@ -360,7 +360,7 @@ main section p {
 }
 
 main section form {
-  width: 90vw;
+  width: 50%;
   max-width: 768px;
   padding: 3vw;
   display: -webkit-box;
@@ -374,47 +374,40 @@ main section form {
   margin: 0 auto;
 }
 
-main section form label {
+main section label {
   margin-bottom: 15px;
   position: relative;
 }
 
-main section form input,
-main section form textarea {
-  width: 70%;
+main section input, main section textarea {
+  width: 100%;
   padding: 10px 0px;
   margin-top: 20px;
   border: none;
   outline: none;
-  display: block;
-  margin: 10px auto;
-  border-radius: .7rem;
+  border-radius: 7px;
 }
 
-main section form input::-webkit-input-placeholder,
-main section form textarea::-webkit-input-placeholder {
+main section input::-webkit-input-placeholder, main section textarea::-webkit-input-placeholder {
   opacity: 0;
 }
 
-main section form input:-ms-input-placeholder,
-main section form textarea:-ms-input-placeholder {
+main section input:-ms-input-placeholder, main section textarea:-ms-input-placeholder {
   opacity: 0;
 }
 
-main section form input::-ms-input-placeholder,
-main section form textarea::-ms-input-placeholder {
+main section input::-ms-input-placeholder, main section textarea::-ms-input-placeholder {
   opacity: 0;
 }
 
-main section form input::placeholder,
-main section form textarea::placeholder {
+main section input::placeholder, main section textarea::placeholder {
   opacity: 0;
 }
 
-main section form span {
+main section span {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 5px;
   -webkit-transform: translateY(30px);
           transform: translateY(30px);
   font-size: 0.825em;
@@ -422,27 +415,25 @@ main section form span {
           transition-duration: 300ms;
 }
 
-main section form button {
+main section button {
   padding: 15px 0px;
   margin-top: 20px;
-  background: #3d5564;
+  background: #3baea0;
   color: #fff;
-  border: 1px solid #fff;
+  border: 1px solid #3baea0;
   cursor: pointer;
   border-radius: 3px;
-  -webkit-transition: all 1s ease-out;
-  transition: all 1s ease-out;
 }
 
-main section form button:hover, main section form button:focus {
-  background: aliceblue;
-  color: #3d5564;
+main section button:hover, main section button:focus {
+  background: #fff;
+  color: #3baea0;
 }
 
-main section form label:focus-within > span,
-main section form input:not(:placeholder-shown) + span,
-main section form textarea:not(:placeholder-shown) + span {
-  color: white;
+main section label:focus-within > span,
+main section input:not(:placeholder-shown) + span,
+main section textarea:not(:placeholder-shown) + span {
+  color: #fff;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
 }
