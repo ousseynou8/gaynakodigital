@@ -180,14 +180,13 @@ main {
 }
 
 main section {
-  padding-top: 2rem;
+  padding-top: 7rem;
 }
 
 main section fieldset {
   border: none;
   border-top: 2px solid #3baea0;
-  border-top-style: groove;
-  border-top-width: .7em;
+  border-top-width: 0.1em;
 }
 
 main section fieldset legend {
@@ -342,7 +341,8 @@ main label {
   position: relative;
 }
 
-main input, main textarea {
+main input,
+main textarea {
   width: 100%;
   padding: 10px 0px;
   margin-top: 20px;
@@ -351,19 +351,23 @@ main input, main textarea {
   border-radius: 7px;
 }
 
-main input::-webkit-input-placeholder, main textarea::-webkit-input-placeholder {
+main input::-webkit-input-placeholder,
+main textarea::-webkit-input-placeholder {
   opacity: 0;
 }
 
-main input:-ms-input-placeholder, main textarea:-ms-input-placeholder {
+main input:-ms-input-placeholder,
+main textarea:-ms-input-placeholder {
   opacity: 0;
 }
 
-main input::-ms-input-placeholder, main textarea::-ms-input-placeholder {
+main input::-ms-input-placeholder,
+main textarea::-ms-input-placeholder {
   opacity: 0;
 }
 
-main input::placeholder, main textarea::placeholder {
+main input::placeholder,
+main textarea::placeholder {
   opacity: 0;
 }
 
