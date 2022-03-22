@@ -151,7 +151,7 @@ body {
   text-align: center;
 }
 
-#header #describe .btnParent, #header #describe .action-btn, #header #describe .action-btn:hover::after {
+#header #describe .btnParent, #header #describe .action-btn {
   height: 3rem;
   padding-left: 0.5em;
   padding-right: 0.5em;
@@ -169,19 +169,9 @@ body {
   font-size: 1.5em;
 }
 
-#header #describe .action-btn:hover::after {
-  position: absolute;
-  content: "C'est partie !";
-  font-size: 1.3em;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  top: 0;
-  height: 40px;
-  background-color: #3baea0;
-  color: #3baea0;
-  -webkit-animation: ActionAnimate 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-          animation: ActionAnimate 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+#header #describe .action-btn:hover {
+  background-color: wheat;
+  color: #069a8e;
 }
 
 #header #clip-path {

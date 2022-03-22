@@ -135,20 +135,22 @@ body {
       @extend .btnParent;
 
       &:hover {
-        &::after {
-          position: absolute;
-          content: "C'est partie !";
-          font-size: 1.3em;
-          @extend .btnParent;
-          right: 0;
-          left: 0;
-          bottom: 0;
-          top: 0;
-          height: 40px;
-          background-color: $accent;
-          color: $accent;
-          animation: ActionAnimate .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-        }
+        background-color: wheat;
+        color: $secondary;
+        // &::after {
+        //   position: absolute;
+        //   content: "C'est partie !";
+        //   font-size: 1.3em;
+        //   @extend .btnParent;
+        //   right: 0;
+        //   left: 0;
+        //   bottom: 0;
+        //   top: 0;
+        //   height: 40px;
+        //   background-color: $accent;
+        //   color: $accent;
+        //   animation: ActionAnimate .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+        // }
       }
     }
   }
