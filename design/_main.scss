@@ -189,6 +189,51 @@ main {
           color: $primary;
         }
       }
+      .realize {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        margin-top: 2rem;
+
+        .projet {
+          background-color: $accent;
+          background-image: url(../imgUrl/keybord.jpeg);
+          background-size: contain;
+          border-radius: 1rem;
+          height: 300px;
+          h2{
+            padding-left: 1em;
+            color: $primary;
+          }
+          p {
+            display: none;
+          }
+          &:hover {
+            background-image: none;
+            position: relative;
+            transition: all 1s ease-in-out;
+            overflow: hidden;
+            &::after {
+              position: absolute;
+              background-color: $primary;
+              background-image: url(../imgUrl/keybord.jpeg);
+              content: '';
+              // background-size: cover;
+              right: 60%;
+              top: 0;
+              left: 0;
+              bottom: 0;
+
+            }
+
+          p {
+            margin: 0 8rem;
+            transform: translateX(9vw);
+            display: block;
+          }
+          }
+        }
+      }
     }
     .services {
       display: grid;
