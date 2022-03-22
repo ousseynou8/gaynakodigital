@@ -7,45 +7,30 @@ body {
 }
 
 #navigation {
-  z-index: 20;
+  z-index: 2;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 20vw 1fr;
       grid-template-columns: 20vw 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #069a8e;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  left: 0;
-  bottom: 0;
+  padding: 0.5em;
 }
 
 #navigation #logo {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-decoration: none;
-  text-transform: capitalize;
-  justify-items: center;
+  text-transform: uppercase;
 }
 
 #navigation #logo span {
   color: #f2eee3;
   font-weight: 900;
   font-size: large;
-}
-
-#navigation #logo span code {
-  color: #f2eee3;
-  font-size: larger;
-  font-stretch: narrower;
-}
-
-#navigation #logo img {
-  max-width: 10rem;
-  border-radius: 30vw;
 }
 
 #navigation ul {
@@ -151,7 +136,7 @@ body {
   text-align: center;
 }
 
-#header #describe .btnParent, #header #describe .action-btn, #header #describe .action-btn:hover::after {
+#header #describe .btnParent, #header #describe .action-btn {
   height: 3rem;
   padding-left: 0.5em;
   padding-right: 0.5em;
@@ -169,19 +154,9 @@ body {
   font-size: 1.5em;
 }
 
-#header #describe .action-btn:hover::after {
-  position: absolute;
-  content: "C'est partie !";
-  font-size: 1.3em;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  top: 0;
-  height: 40px;
-  background-color: #3baea0;
-  color: #3baea0;
-  -webkit-animation: ActionAnimate 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-          animation: ActionAnimate 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+#header #describe .action-btn:hover {
+  background-color: wheat;
+  color: #069a8e;
 }
 
 #header #clip-path {
@@ -218,6 +193,7 @@ main section fieldset {
 main section fieldset legend {
   background-color: #3baea0;
   padding: 0% 15%;
+  margin: auto;
   border-radius: 3em 1em;
 }
 
@@ -521,9 +497,6 @@ footer div {
         -ms-flex-align: center;
             align-items: center;
   }
-  #navigation #logo img {
-    max-width: 90px;
-  }
   #navigation ul {
     border-radius: 5%;
   }
@@ -674,6 +647,53 @@ footer div {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  #header img {
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+  }
+  #header #describe h1 {
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
+  }
+  main {
+    padding: 0;
+    /* contact form */
+  }
+  main section .services {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    padding: 0;
+  }
+  main section fieldset legend {
+    margin: auto;
+    padding: 0% 10%;
+  }
+  main section fieldset legend h1 {
+    font-size: medium;
+  }
+  main form {
+    padding: 0;
+    width: 100%;
+  }
+  main form button {
+    width: 50%;
+    margin: auto;
+  }
+  footer div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer div p {
+    font-size: 0.9rem;
   }
 }
 

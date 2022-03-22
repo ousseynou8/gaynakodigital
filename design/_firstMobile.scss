@@ -1,0 +1,66 @@
+@media (min-width: 320px) and (max-width: 480px) {
+  // section 1
+  #header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    img {
+      width: 100vw;
+      max-width: 100%;
+      margin: 0;
+    }
+
+    #describe h1 {
+      color: #fff;
+      text-shadow: 1px 1px 1px black;
+    }
+  }
+
+  main {
+      padding:0;
+    section {
+        .services{
+            grid-template-columns: repeat(1, 1fr);
+            padding:0;
+        }
+      fieldset {
+        legend {
+             margin:auto;
+            padding: 0% 10%;
+            h1 {
+                font-size: medium;
+            }
+        }
+      }
+    }
+
+   /* contact form */ 
+
+   form{
+       padding:0;
+       width:100%;
+
+       button {
+           width: 50%;
+
+           margin: auto;
+       }
+   }
+
+
+  }
+
+
+//   pied de page 
+footer {
+    div{
+        display: flex;
+        justify-content:center;
+        align-items: center;
+         p{
+        font-size: 0.9rem;
+    }
+    }
+   
+}
+}

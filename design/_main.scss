@@ -3,40 +3,30 @@ body {
 }
 // Ici c'est le navbar
 #navigation {
-  z-index: 20;
+  z-index: 2;
   display: grid;
   grid-template-columns: 20vw 1fr;
+  align-items:center;
   background-color: $secondary;
   // box-shadow: rgba(255, 255, 255, 0.15) 2.4px 2.4px 3.2px;
   position: sticky;
   top: 0;
-  left: 0;
-  bottom: 0;
+ padding: 0.5em;
 
   #logo {
-    display: grid;
-    align-items: center;
+    
     text-decoration: none;
-    text-transform: capitalize;
-    justify-items: center;
+    text-transform: uppercase;
+    
     span {
       // Gaynako
       color: $primary;
       font-weight: 900;
       font-size: large;
       // transform: translateX(-10px);
-      code {
-        // digital
-        color: $primary;
-        font-size: larger;
-        font-stretch: narrower;
-      }
+     
     }
-    img {
-      // L'image du logo
-      max-width: 10rem;
-      border-radius: 30vw;
-    }
+  
   }
   ul {
     // Menu de la navigation
@@ -135,20 +125,22 @@ body {
       @extend .btnParent;
 
       &:hover {
-        &::after {
-          position: absolute;
-          content: "C'est partie !";
-          font-size: 1.3em;
-          @extend .btnParent;
-          right: 0;
-          left: 0;
-          bottom: 0;
-          top: 0;
-          height: 40px;
-          background-color: $accent;
-          color: $accent;
-          animation: ActionAnimate .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-        }
+        background-color: wheat;
+        color: $secondary;
+        // &::after {
+        //   position: absolute;
+        //   content: "C'est partie !";
+        //   font-size: 1.3em;
+        //   @extend .btnParent;
+        //   right: 0;
+        //   left: 0;
+        //   bottom: 0;
+        //   top: 0;
+        //   height: 40px;
+        //   background-color: $accent;
+        //   color: $accent;
+        //   animation: ActionAnimate .5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+        // }
       }
     }
   }
@@ -181,6 +173,7 @@ main {
    legend{
     background-color: #3baea0;
     padding: 0% 15%;
+margin:  auto;
     border-radius: 3em 1em;    
         h1 {
           color: $primary;
