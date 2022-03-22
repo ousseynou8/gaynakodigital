@@ -122,14 +122,14 @@ body {
 }
 
 #header img {
-  width: 35vw;
+  max-width: 50vw;
+  width: 100%;
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: image;
 }
 
 #header #describe {
-  padding-left: 5rem;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: text;
@@ -184,28 +184,28 @@ body {
           animation: ActionAnimate 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
-#header::after {
-  content: '';
+#header #clip-path {
+  z-index: -1;
   position: absolute;
-  left: 35%;
-  right: 0;
-  top: -1%;
+  top: 0;
   bottom: 0;
-  background-color: #069a8e;
-  z-index: -5;
-  -webkit-clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 14% 49%);
-          clip-path: polygon(25% 0%, 100% 1%, 100% 100%, 25% 100%, 14% 49%);
+  background: #069a8e;
+  height: 100%;
+  width: 100%;
+  -webkit-clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%, 40% 50%);
+          clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%, 40% 50%);
 }
 
 main {
   margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
   background-color: #069a8e;
+  /* contact form */
 }
 
 main section {
   padding-top: 2rem;
-  padding: 50px;
-  /* contact form */
 }
 
 main section fieldset {
@@ -217,16 +217,15 @@ main section fieldset {
 
 main section fieldset legend {
   background-color: #3baea0;
-  padding: 0em 15em;
+  padding: 0% 15%;
   border-radius: 3em 1em;
-  margin-bottom: 3rem;
 }
 
 main section fieldset legend h1 {
   color: #f2eee3;
 }
 
-main section fieldset .services {
+main section .services {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -240,7 +239,7 @@ main section fieldset .services {
   padding: 30px;
 }
 
-main section fieldset .services .card {
+main section .services .card {
   margin: auto;
   position: relative;
   overflow: hidden;
@@ -250,7 +249,7 @@ main section fieldset .services .card {
   transition: all 0.5s ease-in-out;
 }
 
-main section fieldset .services .card h2 {
+main section .services .card h2 {
   position: absolute;
   background-color: #3baea0;
   padding-top: 20px;
@@ -263,7 +262,7 @@ main section fieldset .services .card h2 {
   right: 0;
 }
 
-main section fieldset .services .card img {
+main section .services .card img {
   width: 100%;
   height: 40vh;
   min-height: 5rem;
@@ -272,15 +271,11 @@ main section fieldset .services .card img {
           transform: scale(1.6);
 }
 
-main section fieldset .services .card P {
-  display: none;
-}
-
-main section fieldset .services .card:hover {
+main section .services .card:hover {
   background-color: #f2eee3;
 }
 
-main section fieldset .services .card:hover img {
+main section .services .card:hover img {
   background-color: #3baea0;
   width: 100%;
   height: 10vh;
@@ -292,7 +287,7 @@ main section fieldset .services .card:hover img {
   transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-main section fieldset .services .card:hover p {
+main section .services .card:hover p {
   display: block;
   color: #069a8e;
   background-color: #f2eee3;
@@ -300,7 +295,7 @@ main section fieldset .services .card:hover p {
   padding: 0 1em;
 }
 
-main section fieldset .services .card:hover h2 {
+main section .services .card:hover h2 {
   position: absolute;
   left: 0;
   right: 0;
@@ -313,7 +308,7 @@ main section fieldset .services .card:hover h2 {
   transition: all 0.5s cubic-bezier(0.6, -0.28, 0.735, 0.045);
 }
 
-main section div.illustration {
+main div.illustration {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[2];
@@ -323,33 +318,25 @@ main section div.illustration {
           align-items: center;
 }
 
-main section div.about {
+main div.about {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 2em;
 }
 
-main section img.acteur {
+main img.acteur {
   width: 100%;
-  border-radius: 25%;
-}
-
-main section img.dooro {
+  border-radius: 50%;
   -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
 }
 
-main section img.fofana {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-main section p {
+main p {
   font-family: "EB Garamond";
   color: #f2eee3;
   font-size: 1.1rem;
@@ -359,7 +346,7 @@ main section p {
   word-spacing: 4px;
 }
 
-main section form {
+main form {
   width: 50%;
   max-width: 768px;
   padding: 3vw;
@@ -374,12 +361,12 @@ main section form {
   margin: 0 auto;
 }
 
-main section label {
+main label {
   margin-bottom: 15px;
   position: relative;
 }
 
-main section input, main section textarea {
+main input, main textarea {
   width: 100%;
   padding: 10px 0px;
   margin-top: 20px;
@@ -388,23 +375,23 @@ main section input, main section textarea {
   border-radius: 7px;
 }
 
-main section input::-webkit-input-placeholder, main section textarea::-webkit-input-placeholder {
+main input::-webkit-input-placeholder, main textarea::-webkit-input-placeholder {
   opacity: 0;
 }
 
-main section input:-ms-input-placeholder, main section textarea:-ms-input-placeholder {
+main input:-ms-input-placeholder, main textarea:-ms-input-placeholder {
   opacity: 0;
 }
 
-main section input::-ms-input-placeholder, main section textarea::-ms-input-placeholder {
+main input::-ms-input-placeholder, main textarea::-ms-input-placeholder {
   opacity: 0;
 }
 
-main section input::placeholder, main section textarea::placeholder {
+main input::placeholder, main textarea::placeholder {
   opacity: 0;
 }
 
-main section span {
+main span {
   position: absolute;
   top: 0;
   left: 5px;
@@ -415,7 +402,7 @@ main section span {
           transition-duration: 300ms;
 }
 
-main section button {
+main button {
   padding: 15px 0px;
   margin-top: 20px;
   background: #3baea0;
@@ -425,14 +412,14 @@ main section button {
   border-radius: 3px;
 }
 
-main section button:hover, main section button:focus {
+main button:hover, main button:focus {
   background: #fff;
   color: #3baea0;
 }
 
-main section label:focus-within > span,
-main section input:not(:placeholder-shown) + span,
-main section textarea:not(:placeholder-shown) + span {
+main label:focus-within > span,
+main input:not(:placeholder-shown) + span,
+main textarea:not(:placeholder-shown) + span {
   color: #fff;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
@@ -660,6 +647,18 @@ footer div {
     -webkit-animation: animateAfter .8s ease-in-out .2 alternate;
             animation: animateAfter .8s ease-in-out .2 alternate;
     z-index: 2;
+  }
+  main section fieldset {
+    margin: 0;
+  }
+  main div.illustration {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  main div.illustration img {
+    width: 100%;
   }
 }
 
