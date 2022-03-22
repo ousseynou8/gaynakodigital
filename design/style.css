@@ -7,45 +7,30 @@ body {
 }
 
 #navigation {
-  z-index: 20;
+  z-index: 2;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 20vw 1fr;
       grid-template-columns: 20vw 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #069a8e;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  left: 0;
-  bottom: 0;
+  padding: 0.5em;
 }
 
 #navigation #logo {
-  display: -ms-grid;
-  display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   text-decoration: none;
-  text-transform: capitalize;
-  justify-items: center;
+  text-transform: uppercase;
 }
 
 #navigation #logo span {
   color: #f2eee3;
   font-weight: 900;
   font-size: large;
-}
-
-#navigation #logo span code {
-  color: #f2eee3;
-  font-size: larger;
-  font-stretch: narrower;
-}
-
-#navigation #logo img {
-  max-width: 10rem;
-  border-radius: 30vw;
 }
 
 #navigation ul {
@@ -206,9 +191,9 @@ main section fieldset {
 
 main section fieldset legend {
   background-color: #3baea0;
-  opacity: 0.3;
   padding: 0% 15%;
-  border-radius: 2rem;
+  margin: auto;
+  border-radius: 3em 1em;
 }
 
 main section fieldset legend h1 {
@@ -487,77 +472,6 @@ footer div {
           align-items: flex-end;
 }
 
-@media screen and (max-width: 1044px) {
-  #navigation ul li span {
-    color: #f2eee3;
-    font-size: .9em;
-  }
-  #navigation ul li a {
-    margin: auto 12px;
-    font-size: .9em;
-  }
-  #navigation ul li:hover {
-    border-radius: 1rem;
-    font-size: .8em;
-    text-align: center;
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-}
-
-@media screen and (max-width: 930px) {
-  #navigation ul li span {
-    color: #f2eee3;
-    font-size: 2em;
-  }
-  #navigation ul li a {
-    margin: auto 12px;
-    display: none;
-  }
-  #navigation ul li:hover {
-    background-color: #f2eee3;
-    font-size: .7em;
-    text-align: center;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-    -webkit-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out;
-  }
-  #navigation ul li:hover span {
-    display: none;
-  }
-  #navigation ul li:hover a {
-    display: block;
-  }
-  #header {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-  #header img {
-    width: 40vw;
-    margin-top: 2rem;
-  }
-  #header #describe {
-    margin-top: 1rem;
-  }
-  #header #describe h1 {
-    color: tomato;
-    letter-spacing: 1px;
-    font-family: Ultra;
-  }
-  #header #describe p {
-    color: #f2eee3;
-    font-family: "EB Garamond";
-    letter-spacing: .5px;
-    line-height: 1.5;
-    font-weight: 600;
-    font-size: 19px;
-    padding: 1em;
-  }
-}
-
 @media screen and (max-width: 720px) {
   #navigation {
     display: -ms-grid;
@@ -567,9 +481,6 @@ footer div {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  #navigation #logo img {
-    max-width: 90px;
   }
   #navigation ul {
     border-radius: 5%;
@@ -706,6 +617,68 @@ footer div {
   }
   main div.illustration img {
     width: 100%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #header img {
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+  }
+  #header #describe h1 {
+    color: #fff;
+    text-shadow: 1px 1px 1px black;
+  }
+  main {
+    padding: 0;
+    /* contact form */
+  }
+  main section .services {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    padding: 0;
+  }
+  main section fieldset legend {
+    margin: auto;
+    padding: 0% 10%;
+  }
+  main section fieldset legend h1 {
+    font-size: medium;
+  }
+  main form {
+    padding: 0;
+    width: 100%;
+  }
+  main form button {
+    width: 50%;
+    margin: auto;
+  }
+  footer div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  footer div p {
+    font-size: 0.9rem;
   }
 }
 
