@@ -662,6 +662,21 @@ footer div {
   }
 }
 
+@media (min-width: 320px) and (max-width: 480px) {
+  #header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 @-webkit-keyframes animateBefore {
   0% {
     -webkit-transform: translateX(1px) rotateZ(15deg);
