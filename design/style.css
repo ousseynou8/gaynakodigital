@@ -200,6 +200,58 @@ main section fieldset legend h1 {
   color: #f2eee3;
 }
 
+main section fieldset .realize {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+main section fieldset .realize .projet {
+  background-color: #3baea0;
+  background-image: url(../imgUrl/keybord.jpeg);
+  background-size: contain;
+  border-radius: 1rem;
+  height: 300px;
+}
+
+main section fieldset .realize .projet h2 {
+  padding-left: 1em;
+  color: #f2eee3;
+}
+
+main section fieldset .realize .projet p {
+  display: none;
+}
+
+main section fieldset .realize .projet:hover {
+  background-image: none;
+  position: relative;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  overflow: hidden;
+}
+
+main section fieldset .realize .projet:hover::after {
+  position: absolute;
+  background-color: #f2eee3;
+  background-image: url(../imgUrl/keybord.jpeg);
+  content: '';
+  right: 60%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+main section fieldset .realize .projet:hover p {
+  margin: 0 8rem;
+  -webkit-transform: translateX(9vw);
+          transform: translateX(9vw);
+  display: block;
+}
+
 main section .services {
   display: -ms-grid;
   display: grid;
@@ -418,77 +470,6 @@ footer div {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-}
-
-@media screen and (max-width: 1044px) {
-  #navigation ul li span {
-    color: #f2eee3;
-    font-size: .9em;
-  }
-  #navigation ul li a {
-    margin: auto 12px;
-    font-size: .9em;
-  }
-  #navigation ul li:hover {
-    border-radius: 1rem;
-    font-size: .8em;
-    text-align: center;
-    -webkit-transform: scale(1.1);
-            transform: scale(1.1);
-  }
-}
-
-@media screen and (max-width: 930px) {
-  #navigation ul li span {
-    color: #f2eee3;
-    font-size: 2em;
-  }
-  #navigation ul li a {
-    margin: auto 12px;
-    display: none;
-  }
-  #navigation ul li:hover {
-    background-color: #f2eee3;
-    font-size: .7em;
-    text-align: center;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
-    -webkit-transition: all .1s ease-in-out;
-    transition: all .1s ease-in-out;
-  }
-  #navigation ul li:hover span {
-    display: none;
-  }
-  #navigation ul li:hover a {
-    display: block;
-  }
-  #header {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-  #header img {
-    width: 40vw;
-    margin-top: 2rem;
-  }
-  #header #describe {
-    margin-top: 1rem;
-  }
-  #header #describe h1 {
-    color: tomato;
-    letter-spacing: 1px;
-    font-family: Ultra;
-  }
-  #header #describe p {
-    color: #f2eee3;
-    font-family: "EB Garamond";
-    letter-spacing: .5px;
-    line-height: 1.5;
-    font-weight: 600;
-    font-size: 19px;
-    padding: 1em;
-  }
 }
 
 @media screen and (max-width: 720px) {
