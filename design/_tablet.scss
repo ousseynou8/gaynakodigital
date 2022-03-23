@@ -2,10 +2,8 @@
 @media  screen and (max-width: 720px) {
     #navigation {
         display: grid;
-        grid-template-columns: 1fr 1fr 30px;
- 
-        align-items: center;
- 
+        grid-template-columns: 1fr 1fr 30px; 
+        align-items: center; 
          
         ul {
             // transform: translateY(-165px) rotateZ(35deg);
