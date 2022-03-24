@@ -185,14 +185,15 @@ margin:  auto;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
-        margin-top: 2rem;
-
+        padding:30px;
         .projet {
           background-color: $accent;
           background-image: url(../imgUrl/keybord.jpeg);
-          background-size: contain;
+          background-size: cover;
+          background-repeat: no-repeat;
           border-radius: 1rem;
           height: 300px;
+
           h2{
             padding-left: 1em;
             color: $primary;
@@ -230,8 +231,7 @@ margin:  auto;
     .services {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      row-gap: 40px;
-      column-gap: 10px;
+      gap: 40px;
       align-items: center;
       padding: 30px;
       .card {

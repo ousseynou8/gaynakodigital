@@ -23,6 +23,9 @@
             grid-template-columns: repeat(1, 1fr);
             padding:0;
         }
+        .realize {
+          grid-template-columns: 1fr !important;
+        }
       fieldset {
         legend {
              margin:auto;
