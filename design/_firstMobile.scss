@@ -1,5 +1,90 @@
 @media (min-width: 320px) and (max-width: 480px) {
+
+
+  #navigation {
+    display: grid;
+    grid-template-columns: 1fr 1fr 30px; 
+    align-items: center; 
+     
+    ul {
+        li {      
+            display: none;
+            span {
+                color: $primary;
+                font-size: 2em;
+            }
+            a {
+                margin: auto 12px;
+            }
+            &:hover {
+                background-color: $primary;
+                font-size: .9em;
+                text-align: center;
+                transform: scale(1.2);
+                transition: all .2s ease-in-out;
+                span { display: none;  }
+                a { display: block;  }
+                &:nth-child(3) {
+                    font-size: .75em;
+                    transform: scale(1) translateX(0) !important;
+                }
+            }
+        }
+    }
+    #burger {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        right: 5%;
+        top: 20%;
+        .burg {
+            width: 19px;
+            height: 2.8px;
+            background-color: $primary;
+            margin-top: 4px; 
+        }
+    }
+}
+
+.menuHover {
+  display: grid !important;
+  grid-template-rows: repeat(5,1fr) !important;
+  gap: 15px;
+  padding: 1em !important;
+  position: fixed;
+ 
+  border-radius: .1em;
+  right: 0;
+ top: 20px;
+  z-index: 0;
+  background-color: $accent;
+  transition: all .30s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  li {
+      display: inline-block !important;
+      padding: .5em;
+      border: -5px;
+      span {
+          display: inline !important;
+          font-size: 1.4em !important;
+      }
+      a {
+          font-size: 1.2rem !important;
+          display: inline !important;
+      }
+      &:hover {
+          font-size: 1em;
+          text-align: center;
+          transform: scale(1) translateX(-5px) !important;
+          transition: all .3s ease-in-out;
+          span { display: none;  }
+          a { display: block;  }
+      }
+  }
+}
+
+
   // section 1
+
   #header {
     display: flex;
     flex-direction: column;

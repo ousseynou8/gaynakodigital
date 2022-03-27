@@ -473,7 +473,34 @@ footer div {
           align-items: flex-end;
 }
 
-@media screen and (max-width: 720px) {
+@media (min-width: 768px) and (max-width: 1024px) {
+  #navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main section fieldset {
+    margin: 0;
+  }
+  main div.illustration {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  main div.illustration img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
   #navigation {
     display: -ms-grid;
     display: grid;
@@ -482,9 +509,6 @@ footer div {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  #navigation ul {
-    border-radius: 5%;
   }
   #navigation ul li {
     display: none;
@@ -537,11 +561,10 @@ footer div {
     gap: 15px;
     padding: 1em !important;
     position: fixed;
-    top: 10%;
     border-radius: .1em;
-    right: -6%;
-    left: 0;
-    z-index: -15;
+    right: 0;
+    top: 20px;
+    z-index: 0;
     background-color: #3baea0;
     -webkit-transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
@@ -573,55 +596,6 @@ footer div {
   .menuHover li:hover a {
     display: block;
   }
-  .burgHover {
-    padding: 5px;
-  }
-  .burgHover .burg {
-    background-color: transparent !important;
-  }
-  .burgHover .dos::before {
-    content: '';
-    width: 19px;
-    height: 2.8px;
-    position: absolute;
-    background-color: tomato;
-    -webkit-transform: translateX(5px) rotateZ(45deg);
-            transform: translateX(5px) rotateZ(45deg);
-    -webkit-transform-origin: center;
-            transform-origin: center;
-    -webkit-animation: animateBefore .8s ease-in-out .2 alternate;
-            animation: animateBefore .8s ease-in-out .2 alternate;
-    z-index: 2;
-  }
-  .burgHover .dos::after {
-    content: '';
-    width: 19px;
-    height: 2.8px;
-    position: absolute;
-    background-color: tomato;
-    -webkit-transform: translateX(5px) rotateZ(-45deg);
-            transform: translateX(5px) rotateZ(-45deg);
-    -webkit-transform-origin: center;
-            transform-origin: center;
-    -webkit-animation: animateAfter .8s ease-in-out .2 alternate;
-            animation: animateAfter .8s ease-in-out .2 alternate;
-    z-index: 2;
-  }
-  main section fieldset {
-    margin: 0;
-  }
-  main div.illustration {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-  }
-  main div.illustration img {
-    width: 100%;
-  }
-}
-
-@media (min-width: 320px) and (max-width: 480px) {
   #header {
     display: -webkit-box;
     display: -ms-flexbox;

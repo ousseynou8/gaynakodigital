@@ -15,6 +15,3 @@ listMenu.forEach(li => {
 
 
 burger.addEventListener('click', burgerAction);
-
-
- 
