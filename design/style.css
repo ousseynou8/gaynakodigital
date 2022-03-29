@@ -179,21 +179,24 @@ main {
   /* contact form */
 }
 
-main section {
-  padding-top: 7rem;
-}
-
 main section fieldset {
   border: none;
   border-top: 2px solid #3baea0;
   border-top-width: 0.1em;
 }
 
+main section fieldset .services {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
 main section fieldset legend {
   background-color: #3baea0;
-  padding: 0% 15%;
-  margin: auto;
-  border-radius: 3em 1em;
+  padding: 0 5rem;
+  margin: 5rem auto;
+  border-radius: 3em;
 }
 
 main section fieldset legend h1 {
@@ -497,6 +500,59 @@ footer div {
   }
   main div.illustration img {
     width: 100%;
+  }
+}
+
+@media screen and (max-width: 930px) {
+  #navigation ul li span {
+    color: #f2eee3;
+    font-size: 2em;
+  }
+  #navigation ul li a {
+    margin: auto 12px;
+    display: none;
+  }
+  #navigation ul li:hover {
+    background-color: #f2eee3;
+    font-size: .7em;
+    text-align: center;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+  }
+  #navigation ul li:hover span {
+    display: none;
+  }
+  #navigation ul li:hover a {
+    display: block;
+  }
+  #header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  #header img {
+    width: 40vw;
+    margin-top: 2rem;
+  }
+  #header #describe {
+    margin-top: 1rem;
+  }
+  #header #describe h1 {
+    color: #3baea0;
+    letter-spacing: 1px;
+    font-family: Ultra;
+  }
+  #header #describe p {
+    color: #f2eee3;
+    font-family: "EB Garamond";
+    letter-spacing: .5px;
+    line-height: 1.5;
+    font-weight: 600;
+    font-size: 19px;
+    padding: 1em;
   }
 }
 
